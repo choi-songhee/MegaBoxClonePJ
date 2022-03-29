@@ -80,7 +80,7 @@
         </a>
       </li>
     </ul>
-  </div>
+  </div>팅
 </template>
 
 <script>
