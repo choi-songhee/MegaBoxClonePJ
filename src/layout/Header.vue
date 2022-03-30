@@ -91,5 +91,7 @@ export default {
       background-position: center 0;
       background-repeat: no-repeat;
     }
+
+
   }
 </style>
