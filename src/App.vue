@@ -19,7 +19,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 @import "./scss/_base.scss";
 @import "./scss/_common.scss";
 </style>

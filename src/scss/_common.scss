@@ -1,7 +1,35 @@
-.content-wrap {
+.container {
   width: 100%;
   min-width: 1100px;
   min-height: 100%;
   margin: -92px 0 -200px 0;
   padding: 92px 0 300px 0;
+}
+
+.contents {
+  width: 100%;
+  margin: 0;
+  padding: 40px 0 0;
+
+  &__inner {
+    width: 1100px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    padding: 0 0 26px 0;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    color: #222;
+  }
+
+  &__sub-title {
+    padding-top: 70px;
+    font-size: 24px;
+    font-weight: 400;
+    color: #503396;
+    line-height: 1.1;
+  }
 }
