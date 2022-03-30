@@ -2,7 +2,7 @@
   <footer class="footer">
     <!--  footer-top  -->
     <div class="footer__top">
-      <div class="inner-wrap">
+      <div class="footer__inner-wrap">
         <ul class="fnb">
           <li class="fnb__li"><a href="#" title="회사소개 페이지로 이동" class="fnb__link">회사소개</a></li>
           <li class="fnb__li"><a href="#" title="인재채용 페이지로 이동" class="fnb__link">인재채용</a></li>
@@ -23,7 +23,7 @@
 
     <!--  footer-bottom  -->
     <div class="footer__bottom">
-      <div class="inner-wrap">
+      <div class="footer__inner-wrap">
         <div class="ci">MEGABOX : LIFE Theater</div>
         <div class="footer__info">
           <div>
@@ -55,7 +55,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .footer{
   position: relative;
   min-width: 1100px;
@@ -65,55 +65,72 @@ export default {
   padding: 0;
   background-color: #f8f8fa;
   box-sizing: border-box;
+
+  &__top{
+    overflow: hidden;
+    width: 1100px;
+    margin: 0 auto;
+    padding: 30px 0;
+  }
+
+  &__inner-wrap{
+    width: 1100px;
+    margin: 0 auto;
+
+    &:before{
+      content: '';
+      display: table;
+    }
+
+    &:after{
+      clear: both;
+    }
+  }
+
+  .fnb {
+    float: left;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    &__li {
+      float: left;
+      margin-left: 14px;
+    }
+
+    &__li:first-child {
+      margin-left: 0;
+    }
+
+    &__link {
+      display: block;
+      color: #666;
+      line-height: 30px;
+      font-size: .8667em;
+      text-decoration: none;
+    }
+
+    &__li--privacy {
+      color: #222;
+      font-weight: 700;
+    }
+  }
+
+  .search-theater{
+    overflow: hidden;
+    float: right;
+    display: block;
+    width: 106px;
+    height: 30px;
+    text-align: center;
+    line-height: 28px;
+    color: #666;
+    font-size: .8667em;
+    border: 1px solid #d8d9db;
+    border-radius: 30px;
+    text-decoration: none;
+  }
 }
 
-.footer__top{
-  overflow: hidden;
-  width: 1100px;
-  margin: 0 auto;
-  padding: 30px 0;
-}
-
-.inner-wrap{
-  width: 1100px;
-  margin: 0 auto;
-}
-
-.inner-wrap:before{
-  content: '';
-  display: table;
-}
-
-.inner-wrap:after{
-  clear: both;
-}
-
-.fnb{
-  float: left;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-.fnb__li{
-  float: left;
-  margin-left: 14px;
-}
-
-.fnb__li:first-child{
-  margin-left: 0;
-}
-
-.fnb__link {
-  display: block;
-  color: #666;
-  line-height: 30px;
-  font-size: .8667em;
-  text-decoration: none;
-}
-
-.fnb__li--privacy {
-  color: #222;
-  font-weight: 700;
-}
 
 </style>
