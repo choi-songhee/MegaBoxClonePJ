@@ -48,6 +48,16 @@ a {
   text-decoration: none;
   color: #041b2d;
 }
+button {
+  background: inherit;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+  overflow: visible;
+  cursor: pointer;
+}
+
 
 .sr-only {
   display: none !important;
