@@ -1,21 +1,25 @@
 <template>
-  <div class="content-wrap">
-    <h1>스토어</h1>
-    <div class="inner-wrap">
-      <div class="tabs">
-        <Tab
-          v-for="item in list"
-          v-bind="item" :key="item.id"
-          v-model="currentId"
-        />
-      </div>
-      <div class="tab-content">
-        <div v-show="currentId == 0">tab cont1</div>
-        <div v-show="currentId == 1">tab cont2</div>
-        <div v-show="currentId == 2">tab cont3</div>
-        <div v-show="currentId == 3">tab cont4</div>
+  <div class="container">
+    <div class="contents">
+      <div class="contents__inner">
+        <h1 class="contents__title">스토어</h1>
+        <div class="tabs">
+          <Tab
+            v-for="item in list"
+            v-bind="item" :key="item.id"
+            v-model="currentId"
+          />
+        </div>
+        <div class="tab-content">
+          <div v-show="currentId == 0">tab cont1</div>
+          <div v-show="currentId == 1">tab cont2</div>
+          <div v-show="currentId == 2">tab cont3</div>
+          <div v-show="currentId == 3">tab cont4</div>
+        </div>
+        <h3 class="contents__sub-title">추천 이벤트</h3>
       </div>
     </div>
+
   </div>
 </template>
 

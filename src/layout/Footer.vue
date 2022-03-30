@@ -1,29 +1,28 @@
 <template>
-  <div>
     <footer class="footer">
     <!--  footer-top  -->
     <div class="footer__top">
         <ul class="fnb">
-          <li class="fnb__li"><a href="#" title="회사소개 페이지로 이동" class="fnb__link">회사소개</a></li>
-          <li class="fnb__li"><a href="#" title="인재채용 페이지로 이동" class="fnb__link">인재채용</a></li>
-          <li class="fnb__li"><a href="#" title="사회공헌 페이지로 이동" class="fnb__link">사회공헌</a></li>
-          <li class="fnb__li"><a href="#" title="제휴/광고/부대사업문의 페이지로 이동" class="fnb__link">제휴/광고/부대사업문의</a></li>
-          <li class="fnb__li"><a href="#" title="이용약관 페이지로 이동" class="fnb__link">이용약관</a></li>
-          <li class="fnb__li"><a href="#" title="위치기반서비스 이용약관 페이지로 이동" class="fnb__link">위치기반서비스 이용약관</a></li>
-          <li class="fnb__li"><a href="#" title="개인정보처리방침 페이지로 이동" class="fnb__link fnb__link--privacy">개인정보처리방침</a></li>
-          <li class="fnb__li"><a href="#" target="_blank" title="윤리경영 페이지로 이동" class="fnb__link">윤리경영</a></li>
+          <li class="fnb__list"><router-link to="/" title="회사소개 페이지로 이동" class="fnb__link">회사소개</router-link></li>
+          <li class="fnb__list"><router-link to="/" title="인재채용 페이지로 이동" class="fnb__link">인재채용</router-link></li>
+          <li class="fnb__list"><router-link to="/" title="사회공헌 페이지로 이동" class="fnb__link">사회공헌</router-link></li>
+          <li class="fnb__list"><router-link to="/" title="제휴/광고/부대사업문의 페이지로 이동" class="fnb__link">제휴/광고/부대사업문의</router-link></li>
+          <li class="fnb__list"><router-link to="/" title="이용약관 페이지로 이동" class="fnb__link">이용약관</router-link></li>
+          <li class="fnb__list"><router-link to="/" title="위치기반서비스 이용약관 페이지로 이동" class="fnb__link">위치기반서비스 이용약관</router-link>
+          <li class="fnb__list"><router-link to="/" title="개인정보처리방침 페이지로 이동" class="fnb__link fnb__link--privacy">개인정보처리방침</router-link></li>
+          <li class="fnb__list"><a href="#" target="_blank" title="윤리경영 페이지로 이동" class="fnb__link">윤리경영</a></li>
         </ul>
-        <a href="#" class="search-theater" title="극장찾기">
+
+        <router-link to="/" class="search-theater">
           <i class="icon-search icon-set"></i>
           극장찾기
-        </a>
+        </router-link>
       </div>
     <!-- // footer-top  -->
 
     <!--  footer-bottom  -->
     <div class="footer__bottom">
-      <div class="inner-wrap">
-        <div class="ci">MEGABOX : LIFE Theater</div>
+        <div class="footer__ci">MEGABOX : LIFE Theater</div>
         <div class="footer__info">
           <div class="address">
             <address class="address__info">서울특별시 마포구 월드컵로 240, 지상2층(성산동, 월드컵주경기장)</address>
@@ -33,7 +32,7 @@
           <span>· 개인정보보호책임자 공성진</span>
           <span>· 사업자등록번호 211-86-59478</span>
           <span>· 통신판매업신고번호 제 2020-서울마포-4545 호</span>
-          <p class="copyright">COPYRIGHT © MegaboxJoongAng, Inc. All rights reserved</p>
+          <p class="footer__copyright">COPYRIGHT © MegaboxJoongAng, Inc. All rights reserved</p>
         </div>
         <div class="footer__sns">
           <a href="https://twitter.com/megaboxon" target="_blank" title="megabox 트위터 페이지로 이동" class="footer__sns-link">
@@ -52,11 +51,9 @@
             <i class="icon-appstore icon-set">앱스토어</i>
           </a>
         </div>
-      </div>
     </div>
     <!-- // footer-bottom  -->
   </footer>
-  </div>
 </template>
 
 <script>
@@ -83,18 +80,13 @@ export default {
     padding: 30px 0;
   }
 
-  .inner-wrap {
-    margin: 0 auto;
-    width: 1100px;
-  }
-
   .fnb {
     float: left;
     list-style-type: none;
     margin: 0;
     padding: 0;
 
-    &__li {
+    &__list {
       float: left;
       margin-left: 14px;
       &:first-child{
@@ -140,7 +132,7 @@ export default {
       margin-right: 4px;
       width: 15px;
       height: 15px;
-      background-image: url('../assets/pc/icon_footer_search.png');
+      background-image: url('../assets/pc/icon_search.png');
     }
     &-set{
       overflow: hidden;
@@ -186,7 +178,7 @@ export default {
     padding: 0;
   }
 
-  .ci {
+  &__ci {
     overflow: hidden;
     display: block;
     float: left;
@@ -206,13 +198,12 @@ export default {
 
   .address{
     &__info{
-      margin-bottom: 0;
       display: inline-block;
       font-style: normal;
     }
   }
 
-  .copyright{
+  &__copyright{
     margin: 0;
   }
 

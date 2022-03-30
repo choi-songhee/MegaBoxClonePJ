@@ -1,17 +1,19 @@
 <template>
-  <div class="content-wrap">
-    <h1 class="">메가박스 멤버십</h1>
-    <div class="inner-wrap">
-      <div class="tabs">
-        <Tab
-          v-for="item in list"
-          v-bind="item" :key="item.id"
-          v-model="currentId"
-        />
-      </div>
-      <div class="tab-content">
-        <div v-show="currentId == 0">tab cont1</div>
-        <div v-show="currentId == 1">tab cont2</div>
+  <div class="container">
+    <div class="contents">
+      <div class="contents__inner">
+        <h1 class="contents__title">메가박스 멤버십</h1>
+        <div class="tabs">
+          <Tab
+            v-for="item in list"
+            v-bind="item" :key="item.id"
+            v-model="currentId"
+          />
+        </div>
+        <div class="tab-content">
+          <div v-show="currentId == 0">tab cont1</div>
+          <div v-show="currentId == 1">tab cont2</div>
+        </div>
       </div>
     </div>
   </div>
