@@ -4,7 +4,6 @@
     <footer class="footer">
     <!--  footer-top  -->
     <div class="footer__top">
-      <div class="finner-wrap">
         <ul class="fnb">
           <li class="fnb__li"><a href="#" title="회사소개 페이지로 이동" class="fnb__link">회사소개</a></li>
           <li class="fnb__li"><a href="#" title="인재채용 페이지로 이동" class="fnb__link">인재채용</a></li>
@@ -20,7 +19,6 @@
           극장찾기
         </a>
       </div>
-    </div>
     <!-- // footer-top  -->
 
     <!--  footer-bottom  -->
