@@ -4,17 +4,18 @@
   min-height: 100%;
   margin: -92px 0 -200px 0;
   padding: 92px 0 300px 0;
+
+  .inner {
+    width: 1100px;
+    margin: 0 auto;
+  }
 }
 
 .contents {
   width: 100%;
+  min-height: 1000px;
   margin: 0;
   padding: 40px 0 0;
-
-  &__inner {
-    width: 1100px;
-    margin: 0 auto;
-  }
 
   &__title {
     padding: 0 0 26px 0;
@@ -31,6 +32,10 @@
     font-weight: 400;
     color: #503396;
     line-height: 1.1;
+  }
+
+  &.location-fixed {
+    padding-top: 82px;
   }
 }
 

@@ -1,7 +1,8 @@
 <template>
   <div class="container">
+    <Location :lists="depthList"/>
     <div class="contents">
-      <div class="contents__inner">
+      <div class="inner">
         <h1 class="contents__title">스토어</h1>
         <div class="tabs">
           <Tab
@@ -25,11 +26,13 @@
 
 <script>
 import Tab from './Tab'
+import Location from './Location'
 
 export default {
   name: 'StoreMain',
   components: {
-    Tab
+    Tab,
+    Location
   },
   data () {
     return {
@@ -39,6 +42,12 @@ export default {
         { id: 1, label: '메가티켓' },
         { id: 2, label: '팝콘/음료/굿즈' },
         { id: 3, label: '포인트몰' }
+      ],
+      depthList: [
+        {
+          path: '/',
+          depthName: '스토어'
+        }
       ]
     }
   },

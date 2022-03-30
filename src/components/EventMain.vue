@@ -1,9 +1,8 @@
 <template>
-  <div class="content-wrap">
-    <h1>Event Main</h1>
-    <div class="container">
+  <div class="container">
+    <Location :lists="depthList"/>
       <div class="contents">
-        <div class="contents__inner">
+        <div class="inner">
           <h1 class="contents__title">진행중인 이벤트</h1>
           <div class="tabs">
             <Tab
@@ -40,20 +39,21 @@
         </div>
       </div>
     </div>
-  </div>
 </template>
 
 <script>
 import Tab from './Tab'
 import SearchArea from './SearchArea'
 import MoreButton from './MoreButton'
+import Location from './Location'
 
 export default {
   name: 'EventMain',
   components: {
     MoreButton,
     SearchArea,
-    Tab
+    Tab,
+    Location
   },
   data () {
     return {
@@ -65,6 +65,16 @@ export default {
         { id: 3, label: '극장' },
         { id: 4, label: '제휴/할인' },
         { id: 5, label: '시사회/무대인사' }
+      ],
+      depthList: [
+        {
+          path: '/',
+          depthName: '이벤트'
+        },
+        {
+          path: '/',
+          depthName: '진행중 이벤트'
+        }
       ]
     }
   },
@@ -76,4 +86,6 @@ export default {
 }
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+
+</style>
