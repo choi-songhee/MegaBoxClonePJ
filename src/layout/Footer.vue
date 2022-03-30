@@ -1,5 +1,52 @@
 <template>
-  <h1>footer</h1>
+  <footer class="footer">
+    <!--  footer-top  -->
+    <div class="footer__top">
+      <div class="inner-wrap">
+        <ul class="fnb">
+          <li class="fnb__li"><a href="#" title="회사소개 페이지로 이동" class="fnb__link">회사소개</a></li>
+          <li class="fnb__li"><a href="#" title="인재채용 페이지로 이동" class="fnb__link">인재채용</a></li>
+          <li class="fnb__li"><a href="#" title="사회공헌 페이지로 이동" class="fnb__link">사회공헌</a></li>
+          <li class="fnb__li"><a href="#" title="제휴/광고/부대사업문의 페이지로 이동" class="fnb__link">제휴/광고/부대사업문의</a></li>
+          <li class="fnb__li"><a href="#" title="이용약관 페이지로 이동" class="fnb__link">이용약관</a></li>
+          <li class="fnb__li"><a href="#" title="위치기반서비스 이용약관 페이지로 이동" class="fnb__link">위치기반서비스 이용약관</a></li>
+          <li class="fnb__li fnb__li--privacy"><a href="#" title="개인정보처리방침 페이지로 이동" class="fnb__link">개인정보처리방침</a></li>
+          <li class="fnb__li"><a href="#" target="_blank" title="윤리경영 페이지로 이동" class="fnb__link">윤리경영</a></li>
+        </ul>
+        <a href="#" class="search-theater" title="극장찾기">
+          <i></i>
+          극장찾기
+        </a>
+      </div>
+    </div>
+    <!-- // footer-top  -->
+
+    <!--  footer-bottom  -->
+    <div class="footer__bottom">
+      <div class="inner-wrap">
+        <div class="ci">MEGABOX : LIFE Theater</div>
+        <div class="footer__info">
+          <div>
+            <address>서울특별시 마포구 월드컵로 240, 지상2층(성산동, 월드컵주경기장)</address>
+            <span>ARS 1544-0070</span>
+          </div>
+          <span>대표자명 홍정인</span>
+          <span>· 개인정보보호책임자 공성진</span>
+          <span>· 사업자등록번호 211-86-59478</span>
+          <span>· 통신판매업신고번호 제 2020-서울마포-4545 호</span>
+          <p class="copyright">COPYRIGHT © MegaboxJoongAng, Inc. All rights reserved</p>
+        </div>
+        <div class="footer__sns">
+          <a href="https://twitter.com/megaboxon" target="_blank" title="megabox 트위터 페이지로 이동"><i></i></a>
+          <a href="https://www.facebook.com/megaboxon" target="_blank" title="megabox 페이스북 페이지로 이동"><i>페이스북</i></a>
+          <a href="http://instagram.com/megaboxon" target="_blank" title="megabox 인스타그램 페이지로 이동"><i>인스타그램</i></a>
+          <a href="https://play.google.com/store/apps/details?id=com.megabox.mop" target="_blank" title="megabox 구글플레이 페이지로 이동"><i>구글플레이</i></a>
+          <a href="https://itunes.apple.com/kr/app/megabox/id894443858?l=ko&ls=1&mt=8" target="_blank" title="megabox 앱스토어 페이지로 이동"><i>앱스토어</i></a>
+        </div>
+      </div>
+    </div>
+    <!-- // footer-bottom  -->
+  </footer>
 </template>
 
 <script>
@@ -9,5 +56,64 @@ export default {
 </script>
 
 <style scoped>
+.footer{
+  position: relative;
+  min-width: 1100px;
+  width: 100%;
+  height: 200px;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8fa;
+  box-sizing: border-box;
+}
+
+.footer__top{
+  overflow: hidden;
+  width: 1100px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+.inner-wrap{
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.inner-wrap:before{
+  content: '';
+  display: table;
+}
+
+.inner-wrap:after{
+  clear: both;
+}
+
+.fnb{
+  float: left;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.fnb__li{
+  float: left;
+  margin-left: 14px;
+}
+
+.fnb__li:first-child{
+  margin-left: 0;
+}
+
+.fnb__link {
+  display: block;
+  color: #666;
+  line-height: 30px;
+  font-size: .8667em;
+  text-decoration: none;
+}
+
+.fnb__li--privacy {
+  color: #222;
+  font-weight: 700;
+}
 
 </style>
