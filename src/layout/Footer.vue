@@ -1,6 +1,5 @@
 <template>
   <div>
-    <div class="content_wrap"></div>
     <footer class="footer">
     <!--  footer-top  -->
     <div class="footer__top">
@@ -67,9 +66,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.content_wrap{
-  min-height: 245px;
-}
 .footer {
   position: relative;
   min-width: 1100px;
