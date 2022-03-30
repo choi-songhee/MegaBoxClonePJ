@@ -3,6 +3,7 @@
     <h1>Event Main</h1>
     <Tab></Tab>
     <SearchArea></SearchArea>
+    <MoreButton></MoreButton>
     <div class="container">
       <div class="contents">
         <div class="contents__inner">
@@ -17,10 +18,12 @@
 <script>
 import Tab from './Tab'
 import SearchArea from './SearchArea'
+import MoreButton from './MoreButton'
 
 export default {
   name: 'EventMain',
   components: {
+    MoreButton,
     SearchArea,
     Tab
   }

@@ -134,16 +134,6 @@ export default {
       height: 15px;
       background-image: url('../assets/pc/icon_search.png');
     }
-    &-set{
-      overflow: hidden;
-      display: inline-block;
-      padding: 0;
-      font-size: 0;
-      line-height: 0;
-      vertical-align: middle;
-      background-position: 0 0;
-      background-repeat: no-repeat;
-    }
     &-twitter{
       width: 32px;
       height: 30px;
@@ -187,7 +177,7 @@ export default {
     margin: 0 20px 0 0;
     padding: 0;
     text-indent: -9999px;
-    background: url('../assets/pc/icon_logo_opacity.png');
+    background: url('../assets/pc/icon_logo-opacity.png');
   }
 
   &__info {
