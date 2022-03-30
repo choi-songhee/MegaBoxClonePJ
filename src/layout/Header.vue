@@ -29,13 +29,13 @@
           <router-link to="/" class="gnb__link gnb__link--theater"><span class="sr-only">극장</span></router-link>
         </li>
         <li class="gnb__list">
-          <router-link to="/" class="gnb__link gnb__link--event"><span class="sr-only">이벤트</span></router-link>
+          <router-link to="/EventMain" class="gnb__link gnb__link--event"><span class="sr-only">이벤트</span></router-link>
         </li>
         <li class="gnb__list">
-          <router-link to="/" class="gnb__link gnb__link--store"><span class="sr-only">스토어</span></router-link>
+          <router-link to="/StoreMain" class="gnb__link gnb__link--store"><span class="sr-only">스토어</span></router-link>
         </li>
         <li class="gnb__list">
-          <router-link to="/" class="gnb__link gnb__link--benefit"><span class="sr-only">혜택</span></router-link>
+          <router-link to="/BenefitMain" class="gnb__link gnb__link--benefit"><span class="sr-only">혜택</span></router-link>
         </li>
       </ul>
     </nav>
@@ -81,6 +81,7 @@ export default {
   }
 
   .util-area {
+    z-index: 10;
     position: relative;
     width: 1100px;
     margin: 0 auto;
@@ -109,6 +110,11 @@ export default {
       float: left;
       margin-right: 20px;
       vertical-align: top;
+
+      &:focus, &:hover {
+        color: #666;
+        text-decoration: underline;
+      }
     }
   }
 
