@@ -24,19 +24,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  .current-tab {
-    width: 100%;
-    height: 42px;
-    border: 1px solid #ebebeb;
-    background-color: #fff;
-    text-align: center;
-    font-size: 16px;
-    line-height: 42px;
-    &.active {
-      z-index: 3;
-      color: #503396;
-      border: 1px solid #503396;
-      border-bottom: 0;
-    }
-  }
+
 </style>

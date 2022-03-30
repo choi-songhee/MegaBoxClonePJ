@@ -1,8 +1,6 @@
 <template>
   <div class="content-wrap">
     <h1>Event Main</h1>
-    <Tab></Tab>
-    <SearchArea></SearchArea>
     <div class="container">
       <div class="contents">
         <div class="contents__inner">
@@ -15,12 +13,29 @@
             />
           </div>
           <div class="tab-content">
-            <div v-show="currentId == 0">tab cont1</div>
-            <div v-show="currentId == 1">tab cont2</div>
-            <div v-show="currentId == 2">tab cont3</div>
-            <div v-show="currentId == 3">tab cont4</div>
-            <div v-show="currentId == 4">tab cont5</div>
-            <div v-show="currentId == 5">tab cont6</div>
+            <div v-show="currentId == 0">
+              tab cont1
+            </div>
+            <div v-show="currentId == 1">
+              <SearchArea></SearchArea>
+              tab cont2
+            </div>
+            <div v-show="currentId == 2">
+              <SearchArea></SearchArea>
+              tab cont3
+            </div>
+            <div v-show="currentId == 3">
+              <SearchArea></SearchArea>
+              tab cont4
+            </div>
+            <div v-show="currentId == 4">
+              <SearchArea></SearchArea>
+              tab cont5
+            </div>
+            <div v-show="currentId == 5">
+              <SearchArea></SearchArea>
+              tab cont6
+            </div>
           </div>
         </div>
       </div>
@@ -59,27 +74,4 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
-  .inner-wrap {
-    width: 1100px;
-    margin: 0 auto;
-  }
-  .tabs {
-    position: relative;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    &::after {
-      content: '';
-      display: block;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      z-index: 2;
-      width: 100%;
-      height: 1px;
-      background-color: #503396;
-    }
-  }
-</style>
+<style scoped lang="scss"></style>

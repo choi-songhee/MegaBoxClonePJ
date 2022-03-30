@@ -44,27 +44,4 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
-  .inner-wrap {
-    width: 1100px;
-    margin: 0 auto;
-  }
-  .tabs {
-    position: relative;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    &::after {
-      content: '';
-      display: block;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      z-index: 2;
-      width: 100%;
-      height: 1px;
-      background-color: #503396;
-    }
-  }
-</style>
+<style scoped lang="scss"></style>
