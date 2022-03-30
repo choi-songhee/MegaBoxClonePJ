@@ -3,13 +3,13 @@
     <!--  footer-top  -->
     <div class="footer__top">
         <ul class="fnb">
-          <li class="fnb__list"><router-link to="/" title="회사소개 페이지로 이동" class="fnb__link">회사소개</router-link></li>
-          <li class="fnb__list"><router-link to="/" title="인재채용 페이지로 이동" class="fnb__link">인재채용</router-link></li>
-          <li class="fnb__list"><router-link to="/" title="사회공헌 페이지로 이동" class="fnb__link">사회공헌</router-link></li>
-          <li class="fnb__list"><router-link to="/" title="제휴/광고/부대사업문의 페이지로 이동" class="fnb__link">제휴/광고/부대사업문의</router-link></li>
-          <li class="fnb__list"><router-link to="/" title="이용약관 페이지로 이동" class="fnb__link">이용약관</router-link></li>
-          <li class="fnb__list"><router-link to="/" title="위치기반서비스 이용약관 페이지로 이동" class="fnb__link">위치기반서비스 이용약관</router-link>
-          <li class="fnb__list"><router-link to="/" title="개인정보처리방침 페이지로 이동" class="fnb__link fnb__link--privacy">개인정보처리방침</router-link></li>
+          <li class="fnb__list"><router-link to="/" class="fnb__link">회사소개</router-link></li>
+          <li class="fnb__list"><router-link to="/" class="fnb__link">인재채용</router-link></li>
+          <li class="fnb__list"><router-link to="/" class="fnb__link">사회공헌</router-link></li>
+          <li class="fnb__list"><router-link to="/" class="fnb__link">제휴/광고/부대사업문의</router-link></li>
+          <li class="fnb__list"><router-link to="/" class="fnb__link">이용약관</router-link></li>
+          <li class="fnb__list"><router-link to="/" class="fnb__link">위치기반서비스 이용약관</router-link>
+          <li class="fnb__list"><router-link to="/" class="fnb__link fnb__link--privacy">개인정보처리방침</router-link></li>
           <li class="fnb__list"><a href="#" target="_blank" title="윤리경영 페이지로 이동" class="fnb__link">윤리경영</a></li>
         </ul>
 
