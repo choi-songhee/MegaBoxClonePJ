@@ -43,6 +43,7 @@ export default {
     vertical-align: middle;
     width: 230px;
     height: 36px;
+    margin: 0;
     padding: 0 31px 0 0;
     border: 1px solid #d8d9db;
     border-radius: 3px;
