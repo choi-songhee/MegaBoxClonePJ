@@ -47,6 +47,7 @@ export default {
     padding: 0 31px 0 0;
     border: 1px solid #d8d9db;
     border-radius: 3px;
+    box-sizing: border-box;
     &__input{
       display: block;
       width: 100%;
