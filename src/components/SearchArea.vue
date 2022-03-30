@@ -32,6 +32,7 @@ export default {
     padding-top: 15px;
     line-height: 1.1;
     font-size: 15px;
+    margin: 0;
     &--number{
       color: #01738b;
     }
