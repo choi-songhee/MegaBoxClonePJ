@@ -1,8 +1,6 @@
 <template>
   <div class="content-wrap">
     <h1>Event Main</h1>
-    <Tab></Tab>
-    <SearchArea></SearchArea>
     <div class="container">
       <div class="contents">
         <div class="contents__inner">
