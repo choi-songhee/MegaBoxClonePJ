@@ -132,7 +132,7 @@ export default {
       margin-right: 4px;
       width: 15px;
       height: 15px;
-      background-image: url('../assets/pc/icon_footer_search.png');
+      background-image: url('../assets/pc/icon_search.png');
     }
     &-set{
       overflow: hidden;
