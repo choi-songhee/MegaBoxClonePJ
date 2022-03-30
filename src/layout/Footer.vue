@@ -1,5 +1,7 @@
 <template>
-  <footer class="footer">
+  <div>
+    <div class="content_wrap"></div>
+    <footer class="footer">
     <!--  footer-top  -->
     <div class="footer__top">
       <div class="finner-wrap">
@@ -10,7 +12,7 @@
           <li class="fnb__li"><a href="#" title="제휴/광고/부대사업문의 페이지로 이동" class="fnb__link">제휴/광고/부대사업문의</a></li>
           <li class="fnb__li"><a href="#" title="이용약관 페이지로 이동" class="fnb__link">이용약관</a></li>
           <li class="fnb__li"><a href="#" title="위치기반서비스 이용약관 페이지로 이동" class="fnb__link">위치기반서비스 이용약관</a></li>
-          <li class="fnb__li fnb__li--privacy"><a href="#" title="개인정보처리방침 페이지로 이동" class="fnb__link">개인정보처리방침</a></li>
+          <li class="fnb__li"><a href="#" title="개인정보처리방침 페이지로 이동" class="fnb__link fnb__link--privacy">개인정보처리방침</a></li>
           <li class="fnb__li"><a href="#" target="_blank" title="윤리경영 페이지로 이동" class="fnb__link">윤리경영</a></li>
         </ul>
         <a href="#" class="search-theater" title="극장찾기">
@@ -57,6 +59,7 @@
     </div>
     <!-- // footer-bottom  -->
   </footer>
+  </div>
 </template>
 
 <script>
@@ -66,6 +69,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.content_wrap{
+  min-height: 245px;
+}
 .footer {
   position: relative;
   min-width: 1100px;
@@ -97,10 +103,9 @@ export default {
     &__li {
       float: left;
       margin-left: 14px;
-    }
-
-    &__li:first-child {
-      margin-left: 0;
+      &:first-child{
+        margin-left: 0;
+      }
     }
 
     &__link {
@@ -108,11 +113,14 @@ export default {
       color: #666;
       line-height: 30px;
       font-size: 13px;
-    }
-
-    &__li--privacy {
-      color: #222;
-      font-weight: 700;
+      text-decoration: #666;
+      &:hover{
+        text-decoration: underline;
+      }
+      &--privacy {
+        color: #222;
+        font-weight: 700;
+      }
     }
   }
 
@@ -132,22 +140,49 @@ export default {
     text-decoration: none;
   }
 
-  .icon-search {
-    margin-right: 4px;
-    width: 15px;
-    height: 15px;
-    background-image: url('../assets/pc/icon_footer_search.png');
-  }
-
-  .icon-set{
-    overflow: hidden;
-    display: inline-block;
-    padding: 0;
-    font-size: 0;
-    line-height: 0;
-    vertical-align: middle;
-    background-position: 0 0;
-    background-repeat: no-repeat;
+  .icon{
+    cursor: pointer;
+    &-search{
+      margin-right: 4px;
+      width: 15px;
+      height: 15px;
+      background-image: url('../assets/pc/icon_footer_search.png');
+    }
+    &-set{
+      overflow: hidden;
+      display: inline-block;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+      vertical-align: middle;
+      background-position: 0 0;
+      background-repeat: no-repeat;
+    }
+    &-twitter{
+      width: 32px;
+      height: 30px;
+      background-image: url("../assets/pc/icon_twitter.png");
+    }
+    &-facebook{
+      width: 32px;
+      height: 30px;
+      background-image: url("../assets/pc/icon_facebook.png");
+    }
+    &-instagram{
+      width: 32px;
+      height: 30px;
+      background-image: url("../assets/pc/icon_instagram.png");
+    }
+    &-googleplay{
+      width: 32px;
+      height: 30px;
+      background-image: url("../assets/pc/icon_googleplay.png");
+    }
+    &-appstore{
+      width: 32px;
+      height: 30px;
+      background-image: url("../assets/pc/icon_appstore.png");
+    }
   }
 
   &__bottom {
@@ -177,6 +212,7 @@ export default {
 
   .address{
     &__info{
+      margin-bottom: 0;
       display: inline-block;
       font-style: normal;
     }
@@ -188,43 +224,15 @@ export default {
 
   &__sns{
     float: right;
+    &-link{
+      display: block;
+      float: left;
+      width: 32px;
+      height: 30px;
+      margin-left: 5px;
+      font-size: 0;
+      line-height: 0;
+    }
   }
-
-  &__sns-link{
-    display: block;
-    float: left;
-    width: 32px;
-    height: 30px;
-    margin-left: 5px;
-    font-size: 0;
-    line-height: 0;
-  }
-
-  .icon-twitter{
-      width: 32px;
-      height: 30px;
-      background-image: url("../assets/pc/icon_twitter.png");
-    }
-  .icon-facebook{
-      width: 32px;
-      height: 30px;
-      background-image: url("../assets/pc/icon_facebook.png");
-    }
-  .icon-instagram{
-      width: 32px;
-      height: 30px;
-      background-image: url("../assets/pc/icon_instagram.png");
-    }
-  .icon-googleplay{
-      width: 32px;
-      height: 30px;
-      background-image: url("../assets/pc/icon_googleplay.png");
-    }
-  .icon-appstore{
-      width: 32px;
-      height: 30px;
-      background-image: url("../assets/pc/icon_appstore.png");
-    }
-
 }
 </style>
