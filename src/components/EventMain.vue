@@ -1,13 +1,17 @@
 <template>
-  <h1>Event Main</h1>
+  <div class="content-wrap">
+    <h1>Event Main</h1>
+    <Tab></Tab>
+  </div>
 </template>
 
 <script>
+import Tab from './Tab'
+
 export default {
   name: 'EventMain',
-  data () {
-    return {
-    }
+  components: {
+    Tab
   }
 }
 </script>
