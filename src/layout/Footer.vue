@@ -22,7 +22,6 @@
 
     <!--  footer-bottom  -->
     <div class="footer__bottom">
-      <div class="inner-wrap">
         <div class="footer__ci">MEGABOX : LIFE Theater</div>
         <div class="footer__info">
           <div class="address">
@@ -52,7 +51,6 @@
             <i class="icon-appstore icon-set">앱스토어</i>
           </a>
         </div>
-      </div>
     </div>
     <!-- // footer-bottom  -->
   </footer>
@@ -80,11 +78,6 @@ export default {
     width: 1100px;
     margin: 0 auto;
     padding: 30px 0;
-  }
-
-  .inner-wrap {
-    margin: 0 auto;
-    width: 1100px;
   }
 
   .fnb {
