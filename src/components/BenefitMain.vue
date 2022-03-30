@@ -3,22 +3,45 @@
     <div class="contents">
       <div class="contents__inner">
         <h1 class="contents__title">메가박스 멤버십</h1>
-        <Tab></Tab>
+        <div class="tabs">
+          <Tab
+            v-for="item in list"
+            v-bind="item" :key="item.id"
+            v-model="currentId"
+          />
+        </div>
+        <div class="tab-content">
+          <div v-show="currentId == 0">tab cont1</div>
+          <div v-show="currentId == 1">tab cont2</div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Tab from './Tab'
+
 export default {
   name: 'BenefitMain',
+  components: {
+    Tab
+  },
   data () {
     return {
+      currentId: 0,
+      list: [
+        { id: 0, label: '멤버십 안내' },
+        { id: 1, label: 'VIP LOUNGE' }
+      ]
+    }
+  },
+  computed: {
+    current () {
+      return this.list.find(el => el.id === this.currentId) || {}
     }
   }
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped lang="scss"></style>

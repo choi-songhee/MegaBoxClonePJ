@@ -1,0 +1,34 @@
+.tabs {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+    height: 1px;
+    background-color: #503396;
+  }
+}
+
+.current-tab {
+  width: 100%;
+  height: 42px;
+  border: 1px solid #ebebeb;
+  background-color: #fff;
+  text-align: center;
+  font-size: 16px;
+  line-height: 42px;
+  &.active {
+    z-index: 3;
+    color: #503396;
+    border: 1px solid #503396;
+    border-bottom: 0;
+  }
+}

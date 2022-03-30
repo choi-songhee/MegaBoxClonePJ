@@ -22,4 +22,5 @@ export default {
 <style lang="scss">
 @import "./scss/_base.scss";
 @import "./scss/_common.scss";
+@import "./scss/tab.scss";
 </style>
