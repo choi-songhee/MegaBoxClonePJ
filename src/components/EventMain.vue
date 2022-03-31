@@ -50,23 +50,46 @@
             </div>
             <div v-show="currentId == 1">
               <SearchArea></SearchArea>
-              tab cont2
+              <ul class="event">
+                <li v-for="item in megaPickLists" :key="item.id" class="event__list">
+                  <ListItem :item="item"/>
+                </li>
+              </ul>
             </div>
             <div v-show="currentId == 2">
+              <div class="sub-tab">
+
+              </div>
               <SearchArea></SearchArea>
-              tab cont3
+              <ul class="event">
+                <li v-for="item in megaPickLists" :key="item.id" class="event__list">
+                  <ListItem :item="item"/>
+                </li>
+              </ul>
             </div>
             <div v-show="currentId == 3">
               <SearchArea></SearchArea>
-              tab cont4
+              <ul class="event">
+                <li v-for="item in megaPickLists" :key="item.id" class="event__list">
+                  <ListItem :item="item"/>
+                </li>
+              </ul>
             </div>
             <div v-show="currentId == 4">
               <SearchArea></SearchArea>
-              tab cont5
+              <ul class="event">
+                <li v-for="item in megaPickLists" :key="item.id" class="event__list">
+                  <ListItem :item="item"/>
+                </li>
+              </ul>
             </div>
             <div v-show="currentId == 5">
               <SearchArea></SearchArea>
-              tab cont6
+              <ul class="event">
+                <li v-for="item in megaPickLists" :key="item.id" class="event__list">
+                  <ListItem :item="item"/>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -148,11 +171,14 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.sub-tab {
+
+}
 .event {
   overflow: hidden;
   margin: 0 -20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 
   &__list {
     flex: 0 0 245px;
