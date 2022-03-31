@@ -5,6 +5,7 @@
         <span class="location__home"><em class="sr-only">Home</em></span>
         <router-link
           v-for="list in lists"
+          :key="list.id"
           :to="list.path"
           class="location__link"
         >
