@@ -36,6 +36,7 @@
               tab cont6
             </div>
           </div>
+          <Swiper></Swiper>
         </div>
       </div>
     </div>
@@ -46,10 +47,12 @@ import Tab from './Tab'
 import SearchArea from './SearchArea'
 import MoreButton from './MoreButton'
 import Location from './Location'
+import Swiper from './Swiper'
 
 export default {
   name: 'EventMain',
   components: {
+    Swiper,
     MoreButton,
     SearchArea,
     Tab,
