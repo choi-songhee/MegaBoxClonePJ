@@ -92,7 +92,6 @@
               </ul>
             </div>
           </div>
-<!--          <Swiper></Swiper>-->
           <swiper
             class="swiper"
             :options="swiperOption"
@@ -114,6 +113,7 @@
 </template>
 
 <script>
+import ListItem from './ListItem'
 import Tab from './Tab'
 import SearchArea from './SearchArea'
 import MoreButton from './MoreButton'
