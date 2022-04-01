@@ -13,40 +13,7 @@
           </div>
           <div class="tab-content">
             <div v-show="currentId == 0">
-              <h3 class="contents__sub-title">메가Pick</h3>
-              <ul class="event">
-                <li v-for="item in megaPickLists" :key="item.id" class="event__list">
-                  <ListItem :item="item"/>
-                </li>
-              </ul>
-
-              <h3 class="contents__sub-title">영화</h3>
-              <ul class="event">
-                <li v-for="item in megaPickLists" :key="item.id" class="event__list">
-                  <ListItem :item="item"/>
-                </li>
-              </ul>
-
-              <h3 class="contents__sub-title">극장</h3>
-              <ul class="event">
-                <li v-for="item in megaPickLists" :key="item.id" class="event__list">
-                  <ListItem :item="item"/>
-                </li>
-              </ul>
-
-              <h3 class="contents__sub-title">제휴/할인</h3>
-              <ul class="event">
-                <li v-for="item in megaPickLists" :key="item.id" class="event__list">
-                  <ListItem :item="item"/>
-                </li>
-              </ul>
-
-              <h3 class="contents__sub-title">시사회/무대인사</h3>
-              <ul class="event">
-                <li v-for="item in megaPickLists" :key="item.id" class="event__list">
-                  <ListItem :item="item"/>
-                </li>
-              </ul>
+              tab cont1
             </div>
             <div v-show="currentId == 1">
               <SearchArea></SearchArea>
@@ -69,7 +36,22 @@
               tab cont6
             </div>
           </div>
-          <Swiper></Swiper>
+<!--          <Swiper></Swiper>-->
+          <swiper
+            class="swiper"
+            :options="swiperOption"
+          >
+            <swiper-slide>Slide 1</swiper-slide>
+            <swiper-slide>Slide 2</swiper-slide>
+            <swiper-slide>Slide 3</swiper-slide>
+            <div
+              class="swiper-pagination"
+              slot="pagination"
+            >
+            </div>
+            <div class="swiper-button-prev" slot="button-prev"></div>
+            <div class="swiper-button-next" slot="button-next"></div>
+          </swiper>
         </div>
       </div>
     </div>
@@ -80,16 +62,19 @@ import Tab from './Tab'
 import SearchArea from './SearchArea'
 import MoreButton from './MoreButton'
 import Location from './Location'
-import ListItem from './ListItem'
+
+import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
+import 'swiper/css/swiper.css'
 
 export default {
   name: 'EventMain',
   components: {
-    ListItem,
     MoreButton,
     SearchArea,
     Tab,
-    Location
+    Location,
+    Swiper,
+    SwiperSlide
   },
   data () {
     return {
@@ -112,32 +97,19 @@ export default {
           depthName: '진행중 이벤트'
         }
       ],
-      megaPickLists: [
-        {
-          src: '../../static/dummy/images/img_dummy01.jpeg',
-          alt: '메가박스 오리지널 티켓 이미지',
-          title: '메가박스 오리지널 티켓 No.49 <모비우스>',
-          date: '2022.03.30 ~ 2022.04.13'
+      swiperOption: {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
         },
-        {
-          src: '../../static/dummy/images/img_dummy02.jpeg',
-          alt: '2022 교향악축제 이미지',
-          title: '[클래식소사이어티] 2022 교향악축제 초대 이벤트',
-          date: '2022.03.30 ~ 2022.04.13'
-        },
-        {
-          src: '../../static/dummy/images/img_dummy03.jpeg',
-          alt: '봄시즌음료 이미지',
-          title: '[봄시즌음료]딸기라떼, 옥수수라떼 론칭',
-          date: '2022.03.30 ~ 2022.04.13'
-        },
-        {
-          src: '../../static/dummy/images/img_dummy04.jpeg',
-          alt: '2022년 VIP 회원 혜택 이미지',
-          title: '✌ 2022년 VIP 회원 혜택 안내 ✌',
-          date: '2022.03.30 ~ 2022.04.13'
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
         }
-      ]
+      }
     }
   },
   computed: {
@@ -149,15 +121,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.event {
-  overflow: hidden;
-  margin: 0 -20px;
-  display: flex;
-  justify-content: space-between;
 
-  &__list {
-    flex: 0 0 245px;
-    margin: 0 20px;
-  }
-}
 </style>
