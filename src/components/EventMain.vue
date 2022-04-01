@@ -36,7 +36,22 @@
               tab cont6
             </div>
           </div>
-          <Swiper></Swiper>
+<!--          <Swiper></Swiper>-->
+          <swiper
+            class="swiper"
+            :options="swiperOption"
+          >
+            <swiper-slide>Slide 1</swiper-slide>
+            <swiper-slide>Slide 2</swiper-slide>
+            <swiper-slide>Slide 3</swiper-slide>
+            <div
+              class="swiper-pagination"
+              slot="pagination"
+            >
+            </div>
+            <div class="swiper-button-prev" slot="button-prev"></div>
+            <div class="swiper-button-next" slot="button-next"></div>
+          </swiper>
         </div>
       </div>
     </div>
@@ -48,13 +63,18 @@ import SearchArea from './SearchArea'
 import MoreButton from './MoreButton'
 import Location from './Location'
 
+import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
+import 'swiper/css/swiper.css'
+
 export default {
   name: 'EventMain',
   components: {
     MoreButton,
     SearchArea,
     Tab,
-    Location
+    Location,
+    Swiper,
+    SwiperSlide
   },
   data () {
     return {
@@ -76,7 +96,20 @@ export default {
           path: '/',
           depthName: '진행중 이벤트'
         }
-      ]
+      ],
+      swiperOption: {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        }
+      }
     }
   },
   computed: {
