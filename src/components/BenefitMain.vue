@@ -11,11 +11,11 @@
             v-model="currentId"
           />
         </div>
-        <div class="tab-content">
+      </div>
+      <div class="tab-content">
           <div v-show="currentId == 0">tab cont1</div>
           <div v-show="currentId == 1">tab cont2</div>
         </div>
-      </div>
     </div>
   </div>
 </template>
