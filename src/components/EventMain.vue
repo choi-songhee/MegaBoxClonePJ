@@ -13,27 +13,83 @@
           </div>
           <div class="tab-content">
             <div v-show="currentId == 0">
-              tab cont1
+              <h3 class="contents__sub-title">메가Pick</h3>
+              <ul class="event">
+                <li v-for="item in megaPickLists" :key="item.id" class="event__list">
+                  <ListItem :item="item"/>
+                </li>
+              </ul>
+
+              <h3 class="contents__sub-title">영화</h3>
+              <ul class="event">
+                <li v-for="item in megaPickLists" :key="item.id" class="event__list">
+                  <ListItem :item="item"/>
+                </li>
+              </ul>
+
+              <h3 class="contents__sub-title">극장</h3>
+              <ul class="event">
+                <li v-for="item in megaPickLists" :key="item.id" class="event__list">
+                  <ListItem :item="item"/>
+                </li>
+              </ul>
+
+              <h3 class="contents__sub-title">제휴/할인</h3>
+              <ul class="event">
+                <li v-for="item in megaPickLists" :key="item.id" class="event__list">
+                  <ListItem :item="item"/>
+                </li>
+              </ul>
+
+              <h3 class="contents__sub-title">시사회/무대인사</h3>
+              <ul class="event">
+                <li v-for="item in megaPickLists" :key="item.id" class="event__list">
+                  <ListItem :item="item"/>
+                </li>
+              </ul>
             </div>
             <div v-show="currentId == 1">
               <SearchArea></SearchArea>
-              tab cont2
+              <ul class="event">
+                <li v-for="item in megaPickLists" :key="item.id" class="event__list">
+                  <ListItem :item="item"/>
+                </li>
+              </ul>
             </div>
             <div v-show="currentId == 2">
+              <div class="sub-tab">
+
+              </div>
               <SearchArea></SearchArea>
-              tab cont3
+              <ul class="event">
+                <li v-for="item in megaPickLists" :key="item.id" class="event__list">
+                  <ListItem :item="item"/>
+                </li>
+              </ul>
             </div>
             <div v-show="currentId == 3">
               <SearchArea></SearchArea>
-              tab cont4
+              <ul class="event">
+                <li v-for="item in megaPickLists" :key="item.id" class="event__list">
+                  <ListItem :item="item"/>
+                </li>
+              </ul>
             </div>
             <div v-show="currentId == 4">
               <SearchArea></SearchArea>
-              tab cont5
+              <ul class="event">
+                <li v-for="item in megaPickLists" :key="item.id" class="event__list">
+                  <ListItem :item="item"/>
+                </li>
+              </ul>
             </div>
             <div v-show="currentId == 5">
               <SearchArea></SearchArea>
-              tab cont6
+              <ul class="event">
+                <li v-for="item in megaPickLists" :key="item.id" class="event__list">
+                  <ListItem :item="item"/>
+                </li>
+              </ul>
             </div>
           </div>
 <!--          <Swiper></Swiper>-->
@@ -69,6 +125,7 @@ import 'swiper/css/swiper.css'
 export default {
   name: 'EventMain',
   components: {
+    ListItem,
     MoreButton,
     SearchArea,
     Tab,
@@ -121,5 +178,18 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.sub-tab {
 
+}
+.event {
+  overflow: hidden;
+  margin: 0 -20px;
+  display: flex;
+  justify-content: flex-start;
+
+  &__list {
+    flex: 0 0 245px;
+    margin: 0 20px;
+  }
+}
 </style>
