@@ -11,8 +11,10 @@
               v-model="currentId"
             />
           </div>
-          <div class="tab-content">
-            <div v-show="currentId == 0">
+        </div>
+        <div class="tab-content">
+          <div v-show="currentId == 0">
+            <div class="inner">
               <h3 class="contents__sub-title">메가Pick</h3>
               <ul class="event">
                 <li v-for="item in megaPickLists" :key="item.id" class="event__list">
@@ -48,7 +50,9 @@
                 </li>
               </ul>
             </div>
-            <div v-show="currentId == 1">
+          </div>
+          <div v-show="currentId == 1">
+            <div class="inner">
               <SearchArea></SearchArea>
               <ul class="event">
                 <li v-for="item in megaPickLists" :key="item.id" class="event__list">
@@ -56,9 +60,15 @@
                 </li>
               </ul>
             </div>
-            <div v-show="currentId == 2">
+          </div>
+          <div v-show="currentId == 2">
+            <div class="inner">
               <div class="sub-tab">
-
+                <ul class="sub-tab__lists">
+                  <li v-for="(tab, index) in subTabs" :key="index" class="sub-tab__list" @click="onClickTab(index)">
+                    <router-link :to="tab.path" :class="['sub-tab__link', {'is-active': index === selectedTab}]">{{ tab.name }}</router-link>
+                  </li>
+                </ul>
               </div>
               <SearchArea></SearchArea>
               <ul class="event">
@@ -67,7 +77,9 @@
                 </li>
               </ul>
             </div>
-            <div v-show="currentId == 3">
+          </div>
+          <div v-show="currentId == 3">
+            <div class="inner">
               <SearchArea></SearchArea>
               <ul class="event">
                 <li v-for="item in megaPickLists" :key="item.id" class="event__list">
@@ -75,7 +87,9 @@
                 </li>
               </ul>
             </div>
-            <div v-show="currentId == 4">
+          </div>
+          <div v-show="currentId == 4">
+            <div class="inner">
               <SearchArea></SearchArea>
               <ul class="event">
                 <li v-for="item in megaPickLists" :key="item.id" class="event__list">
@@ -83,8 +97,10 @@
                 </li>
               </ul>
             </div>
-            <div v-show="currentId == 5">
-              <SearchArea></SearchArea>
+          </div>
+          <div v-show="currentId == 5">
+            <div class="inner">
+            <SearchArea></SearchArea>
               <ul class="event">
                 <li v-for="item in megaPickLists" :key="item.id" class="event__list">
                   <ListItem :item="item"/>
@@ -119,6 +135,7 @@ export default {
   data () {
     return {
       currentId: 0,
+      selectedTab: 0,
       list: [
         { id: 0, label: '전체' },
         { id: 1, label: '메가Pick' },
@@ -135,6 +152,28 @@ export default {
         {
           path: '/',
           depthName: '진행중 이벤트'
+        }
+      ],
+      subTabs: [
+        {
+          id: 0,
+          path: '/',
+          name: '전체'
+        },
+        {
+          id: 1,
+          path: '/',
+          name: '빵원쿠폰플러스'
+        },
+        {
+          id: 2,
+          path: '/',
+          name: '빵원쿠폰'
+        },
+        {
+          id: 3,
+          path: '/',
+          name: '굿즈패키지'
         }
       ],
       megaPickLists: [
@@ -165,9 +204,17 @@ export default {
       ]
     }
   },
+  created () {
+    // this.selectedTab = this.subTabs[0].id
+  },
   computed: {
     current () {
       return this.list.find(el => el.id === this.currentId) || {}
+    }
+  },
+  methods: {
+    onClickTab (index) {
+      this.selectedTab = index
     }
   }
 }
@@ -175,7 +222,52 @@ export default {
 
 <style scoped lang="scss">
 .sub-tab {
+  position: relative;
+  padding: 30px 0;
 
+  &__lists::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  &__list {
+    float: left;
+    position: relative;
+    height: 23px;
+    line-height: 16px;
+    padding-right: 16px;
+    margin-right: 15px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1px;
+      height: 14px;
+      background-color: #d8d9db;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    height: 23px;
+    font-size: 16px;
+
+    &.is-active {
+      border-bottom: 2px solid #503396;
+      color: #503396;
+    }
+
+    &:not(.is-active) {
+      &:active,
+      &:focus,
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
 .event {
   overflow: hidden;

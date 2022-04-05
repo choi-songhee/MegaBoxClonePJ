@@ -11,14 +11,14 @@
             v-model="currentId"
           />
         </div>
-        <div class="tab-content">
-          <div v-show="currentId == 0">tab cont1</div>
-          <div v-show="currentId == 1">tab cont2</div>
-          <div v-show="currentId == 2">tab cont3</div>
-          <div v-show="currentId == 3">tab cont4</div>
-        </div>
-        <h3 class="contents__sub-title">추천 이벤트</h3>
       </div>
+      <div class="tab-content">
+        <div v-show="currentId == 0">tab cont1</div>
+        <div v-show="currentId == 1">tab cont2</div>
+        <div v-show="currentId == 2">tab cont3</div>
+        <div v-show="currentId == 3">tab cont4</div>
+      </div>
+      <h3 class="contents__sub-title">추천 이벤트</h3>
     </div>
 
   </div>
