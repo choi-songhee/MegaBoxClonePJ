@@ -1,117 +1,133 @@
 <template>
   <div class="container">
     <Location :lists="depthList"/>
-      <div class="contents">
-        <div class="inner">
-          <h1 class="contents__title">진행중인 이벤트</h1>
-          <div class="tabs">
-            <Tab
-              v-for="item in list"
-              v-bind="item" :key="item.id"
-              v-model="currentId"
-            />
+    <div class="contents">
+      <div class="inner">
+        <h1 class="contents__title">진행중인 이벤트</h1>
+        <div class="tabs">
+          <Tab
+            v-for="item in list"
+            v-bind="item" :key="item.id"
+            v-model="currentId"
+          />
+        </div>
+      </div>
+      <div class="tab-content">
+        <div v-show="currentId == 0">
+          <div class="contents__event-slider">
+            <div>
+              <h3 class="contents__sub-title">추천 이벤트</h3>
+              <div
+                class="swiper-pagination"
+                slot="pagination"
+              >
+              </div>
+            </div>
+            <swiper
+              class="event-swiper"
+              :options="swiperOption"
+            >
+              <swiper-slide>Slide 1</swiper-slide>
+              <swiper-slide>Slide 2</swiper-slide>
+              <swiper-slide>Slide 3</swiper-slide>
+              <div class="swiper-button-prev" slot="button-prev"></div>
+              <div class="swiper-button-next" slot="button-next"></div>
+            </swiper>
+          </div>
+          <div class="inner">
+            <h3 class="contents__sub-title">메가Pick</h3>
+            <ul class="event">
+              <li v-for="item in megaPickLists" :key="item.id" class="event__list">
+                <ListItem :item="item"/>
+              </li>
+            </ul>
+            <h3 class="contents__sub-title">영화</h3>
+            <ul class="event">
+              <li v-for="item in megaPickLists" :key="item.id" class="event__list">
+                <ListItem :item="item"/>
+              </li>
+            </ul>
+            <h3 class="contents__sub-title">극장</h3>
+            <ul class="event">
+              <li v-for="item in megaPickLists" :key="item.id" class="event__list">
+                <ListItem :item="item"/>
+              </li>
+            </ul>
+            <h3 class="contents__sub-title">제휴/할인</h3>
+            <ul class="event">
+              <li v-for="item in megaPickLists" :key="item.id" class="event__list">
+                <ListItem :item="item"/>
+              </li>
+            </ul>
+            <h3 class="contents__sub-title">시사회/무대인사</h3>
+            <ul class="event">
+              <li v-for="item in megaPickLists" :key="item.id" class="event__list">
+                <ListItem :item="item"/>
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="tab-content">
-          <div v-show="currentId == 0">
-            <div class="inner">
-              <h3 class="contents__sub-title">메가Pick</h3>
-              <ul class="event">
-                <li v-for="item in megaPickLists" :key="item.id" class="event__list">
-                  <ListItem :item="item"/>
-                </li>
-              </ul>
-
-              <h3 class="contents__sub-title">영화</h3>
-              <ul class="event">
-                <li v-for="item in megaPickLists" :key="item.id" class="event__list">
-                  <ListItem :item="item"/>
-                </li>
-              </ul>
-
-              <h3 class="contents__sub-title">극장</h3>
-              <ul class="event">
-                <li v-for="item in megaPickLists" :key="item.id" class="event__list">
-                  <ListItem :item="item"/>
-                </li>
-              </ul>
-
-              <h3 class="contents__sub-title">제휴/할인</h3>
-              <ul class="event">
-                <li v-for="item in megaPickLists" :key="item.id" class="event__list">
-                  <ListItem :item="item"/>
-                </li>
-              </ul>
-
-              <h3 class="contents__sub-title">시사회/무대인사</h3>
-              <ul class="event">
-                <li v-for="item in megaPickLists" :key="item.id" class="event__list">
-                  <ListItem :item="item"/>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div v-show="currentId == 1">
-            <div class="inner">
-              <SearchArea></SearchArea>
-              <ul class="event">
-                <li v-for="item in megaPickLists" :key="item.id" class="event__list">
-                  <ListItem :item="item"/>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div v-show="currentId == 2">
-            <div class="inner">
-              <div class="sub-tab">
-                <ul class="sub-tab__lists">
-                  <li v-for="(tab, index) in subTabs" :key="index" class="sub-tab__list" @click="onClickTab(index)">
-                    <router-link :to="tab.path" :class="['sub-tab__link', {'is-active': index === selectedTab}]">{{ tab.name }}</router-link>
-                  </li>
-                </ul>
-              </div>
-              <SearchArea></SearchArea>
-              <ul class="event">
-                <li v-for="item in megaPickLists" :key="item.id" class="event__list">
-                  <ListItem :item="item"/>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div v-show="currentId == 3">
-            <div class="inner">
-              <SearchArea></SearchArea>
-              <ul class="event">
-                <li v-for="item in megaPickLists" :key="item.id" class="event__list">
-                  <ListItem :item="item"/>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div v-show="currentId == 4">
-            <div class="inner">
-              <SearchArea></SearchArea>
-              <ul class="event">
-                <li v-for="item in megaPickLists" :key="item.id" class="event__list">
-                  <ListItem :item="item"/>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div v-show="currentId == 5">
-            <div class="inner">
+        <div v-show="currentId == 1">
+          <div class="inner">
             <SearchArea></SearchArea>
-              <ul class="event">
-                <li v-for="item in megaPickLists" :key="item.id" class="event__list">
-                  <ListItem :item="item"/>
+            <ul class="event">
+              <li v-for="item in megaPickLists" :key="item.id" class="event__list">
+                <ListItem :item="item"/>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div v-show="currentId == 2">
+          <div class="inner">
+            <div class="sub-tab">
+              <ul class="sub-tab__lists">
+                <li v-for="(tab, index) in subTabs" :key="index" class="sub-tab__list" @click="onClickTab(index)">
+                  <router-link :to="tab.path" :class="['sub-tab__link', {'is-active': index === selectedTab}]">{{ tab.name }}</router-link>
                 </li>
               </ul>
             </div>
+            <SearchArea></SearchArea>
+            <ul class="event">
+              <li v-for="item in megaPickLists" :key="item.id" class="event__list">
+                <ListItem :item="item"/>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div v-show="currentId == 3">
+          <div class="inner">
+            <SearchArea></SearchArea>
+            <ul class="event">
+              <li v-for="item in megaPickLists" :key="item.id" class="event__list">
+                <ListItem :item="item"/>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div v-show="currentId == 4">
+          <div class="inner">
+            <SearchArea></SearchArea>
+            <ul class="event">
+              <li v-for="item in megaPickLists" :key="item.id" class="event__list">
+                <ListItem :item="item"/>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div v-show="currentId == 5">
+          <div class="inner">
+            <SearchArea></SearchArea>
+            <ul class="event">
+              <li v-for="item in megaPickLists" :key="item.id" class="event__list">
+                <ListItem :item="item"/>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-    <Top-Button></Top-Button>
     </div>
+    <Top-Button></Top-Button>
+  </div>
 </template>
 
 <script>
@@ -120,6 +136,8 @@ import SearchArea from './SearchArea'
 import MoreButton from './MoreButton'
 import Location from './Location'
 import ListItem from './ListItem'
+import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
+import 'swiper/css/swiper.css'
 import TopButton from './TopButton'
 
 export default {
@@ -130,7 +148,9 @@ export default {
     MoreButton,
     SearchArea,
     Tab,
-    Location
+    Location,
+    Swiper,
+    SwiperSlide
   },
   data () {
     return {
@@ -201,7 +221,20 @@ export default {
           title: '✌ 2022년 VIP 회원 혜택 안내 ✌',
           date: '2022.03.30 ~ 2022.04.13'
         }
-      ]
+      ],
+      swiperOption: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'fraction'
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        }
+      }
     }
   },
   created () {
@@ -224,13 +257,11 @@ export default {
 .sub-tab {
   position: relative;
   padding: 30px 0;
-
   &__lists::after {
     content: '';
     display: block;
     clear: both;
   }
-
   &__list {
     float: left;
     position: relative;
@@ -238,7 +269,6 @@ export default {
     line-height: 16px;
     padding-right: 16px;
     margin-right: 15px;
-
     &::before {
       content: '';
       position: absolute;
@@ -249,17 +279,14 @@ export default {
       background-color: #d8d9db;
     }
   }
-
   &__link {
     display: inline-block;
     height: 23px;
     font-size: 16px;
-
     &.is-active {
       border-bottom: 2px solid #503396;
       color: #503396;
     }
-
     &:not(.is-active) {
       &:active,
       &:focus,
@@ -274,10 +301,23 @@ export default {
   margin: 0 -20px;
   display: flex;
   justify-content: flex-start;
-
   &__list {
     flex: 0 0 245px;
     margin: 0 20px;
   }
+}
+.contents__event-slider {
+  position: relative;
+  height: 402px;
+  margin: 40px 0 0 0;
+  background-color: #f8f8fa;
+}
+.event-swiper{
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  width: 1110px;
+  margin: 0 0 0 -550px;
+  padding: 0 10px 0 0;
 }
 </style>
