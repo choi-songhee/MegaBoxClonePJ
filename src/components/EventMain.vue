@@ -94,6 +94,7 @@
           </div>
         </div>
       </div>
+    <Top-Button></Top-Button>
     </div>
 </template>
 
@@ -103,10 +104,12 @@ import SearchArea from './SearchArea'
 import MoreButton from './MoreButton'
 import Location from './Location'
 import ListItem from './ListItem'
+import TopButton from './TopButton'
 
 export default {
   name: 'EventMain',
   components: {
+    TopButton,
     ListItem,
     MoreButton,
     SearchArea,
