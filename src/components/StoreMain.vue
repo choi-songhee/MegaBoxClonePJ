@@ -15,6 +15,19 @@
       <div class="tab-content">
         <div v-show="currentId == 0">
           <div class="inner">
+            <div class="goods-area">
+              <router-link to="/" class="goods-area__link">
+                <div class="goods-area__text-wrap">
+                  <strong class="goods-area__slogun c-gblue">1인1팝, 1인1콜!</strong>
+                  <strong class="goods-area__slogun c-purple">더블콤보로 함께 해요!</strong>
+                  <span class="goods-area__title">더블콤보</span>
+                  <span class="goods-area__detail">팝콘(R) 2 + 탄산음료(R) 2</span>
+                </div>
+                <figure class="goods-area__img-wrap">
+                  <img class="goods-area__img" src="../../static/dummy/images/img_bestGoods.png" alt="더블 콤보 상품 이미지">
+                </figure>
+              </router-link>
+            </div>
             <div class="contents__title-wrap">
               <h3 class="contents__sub-title">메가티켓</h3>
               <more-button />
@@ -36,9 +49,27 @@
             </ul>
           </div>
         </div>
-        <div v-show="currentId == 1">tab cont2</div>
-        <div v-show="currentId == 2">tab cont3</div>
-        <div v-show="currentId == 3">tab cont4</div>
+        <div v-show="currentId == 1">
+          <div class="inner">
+            <ul class="event event--empty-title">
+              <li v-for="item in megaStoreLists" :key="item.id" class="event__list">
+                <ListItem :item="item" :showPrice="true"/>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div v-show="currentId == 2">
+          <div class="inner">
+            <ul class="event event--empty-title">
+              <li v-for="item in megaStoreLists" :key="item.id" class="event__list">
+                <ListItem :item="item" :showPrice="true"/>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div v-show="currentId == 3">
+          <EmptyResult :emptyMessage="emptyMessage"/>
+        </div>
       </div>
     </div>
 
@@ -50,6 +81,7 @@ import Tab from './Tab'
 import Location from './Location'
 import ListItem from './ListItem'
 import MoreButton from './MoreButton'
+import EmptyResult from './EmptyResult'
 
 export default {
   name: 'StoreMain',
@@ -57,11 +89,13 @@ export default {
     Tab,
     Location,
     ListItem,
-    MoreButton
+    MoreButton,
+    EmptyResult
   },
   data () {
     return {
       currentId: 0,
+      emptyMessage: '판매중인 상품이 없습니다.',
       list: [
         { id: 0, label: '새로운 상품' },
         { id: 1, label: '메가티켓' },
@@ -119,4 +153,63 @@ export default {
 }
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.goods-area {
+  &__link {
+    display: flex;
+    width: 550px;
+    justify-content: flex-start;
+  }
+
+  &__text-wrap {
+    margin-top: 48px;
+    flex: 0 0 265px;
+  }
+
+  &__slogun {
+    display: block;
+    font-size: 32px;
+    line-height: 1.1;
+    font-weight: 400;
+
+    + .goods-area__slogun {
+      margin-top: 10px;
+    }
+
+    &.c-gblue {
+      color: #01738b;
+    }
+
+    &.c-purple {
+      color: #503396;
+    }
+  }
+
+  &__title {
+    display: block;
+    margin-top: 30px;
+    font-size: 18px;
+    color: #222;
+  }
+
+  &__detail {
+    display: block;
+    font-size: 15px;
+    color: #444;
+  }
+
+  &__img-wrap {
+    flex: 0 0 300px;
+    margin: 0;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+
+  + .contents__title-wrap {
+    margin-top: 0;
+  }
+}
+</style>
