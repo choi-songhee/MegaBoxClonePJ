@@ -14,6 +14,7 @@
       </div>
       <div class="tab-content">
         <div v-show="currentId == 0">
+          <!--    스와이퍼      -->
           <div class="event-slider">
             <div class="event-slider__head">
               <h3 class="event-slider__sub-title contents__sub-title">추천 이벤트</h3>
@@ -35,7 +36,7 @@
                   type="button"
                   class="event-slider__pause"
                   :class="{ on : !onClickAutoPlay }"
-                  @click="onClickAutoPlay = !onClickAutoPlay">
+                  @click="handleAutoPlay">
                   <span v-show="!onClickAutoPlay">자동재생</span>
                   <span v-show="onClickAutoPlay">일시정지</span>
                 </button>
@@ -45,77 +46,78 @@
                 <div class="swiper-button-next" slot="button-next"></div>
               </div>
             </div>
-            <swiper
-              ref="eventSwiper"
-              class="event-slider__body"
-              :options="swiperOption"
-            >
-              <swiper-slide class="event-slider__item">
-                <a href="#" class="event-slider__link">
-                  <div class="event-slider__image-wrap">
-                    <img src="../assets/img_swiper-banner1.jpeg" alt="U+멤버십 고객 영화 2,000원 할인 이미지"
-                         class="event-slider__image" />
-                  </div>
-                  <div class="event-slider__desc">
-                    <p class="event-slider__title">U+멤버십 고객 영화 2,000원 할인</p>
-                    <p class="event-slider__date">2021.02.01 ~ 2022.12.31</p>
-                  </div>
-                </a>
-              </swiper-slide>
-              <swiper-slide class="event-slider__item">
-                <a href="#" class="event-slider__link">
-                  <div class="event-slider__image-wrap">
-                    <img src="../assets/img_swiper-banner2.jpeg" alt="차이로 결제하고 캐시백+쿠폰 혜택 받으세요! 이미지"
-                         class="event-slider__image" />
-                  </div>
-                  <div class="event-slider__desc">
-                    <p class="event-slider__title">차이로 결제하고 캐시백+쿠폰 혜택 받으세요!</p>
-                    <p class="event-slider__date">2021.02.01 ~ 2022.12.31</p>
-                  </div>
-                </a>
-              </swiper-slide>
-              <swiper-slide class="event-slider__item">
-                <a href="#" class="event-slider__link">
-                  <div class="event-slider__image-wrap">
-                    <img src="../assets/img_swiper-banner3.jpeg" alt="[알뜰교통카드 X 메가박스] 알뜰하게 영화보고 콤보 구매하는 방법 이미지"
-                         class="event-slider__image" />
-                  </div>
-                  <div class="event-slider__desc">
-                    <p class="event-slider__title">[알뜰교통카드 X 메가박스] 알뜰하게 영화보고 콤보 구매하는 방법</p>
-                    <p class="event-slider__date">2021.02.01 ~ 2022.12.31</p>
-                  </div>
-                </a>
-              </swiper-slide>
-              <swiper-slide class="event-slider__item">
-                <a href="#" class="event-slider__link">
-                  <div class="event-slider__image-wrap">
-                    <img src="../assets/img_swiper-banner4.jpeg" alt="U+멤버십 고객 영화 2,000원 할인 이미지"
-                         class="event-slider__image" />
-                  </div>
-                  <div class="event-slider__desc">
-                    <p class="event-slider__title">U+멤버십 고객 영화 2,000원 할인</p>
-                    <p class="event-slider__date">2021.02.01 ~ 2022.12.31</p>
-                  </div>
-                </a>
-              </swiper-slide>
-              <swiper-slide class="event-slider__item">
-                <a href="#" class="event-slider__link">
-                  <div class="event-slider__image-wrap">
-                    <img src="../assets/img_swiper-banner5.jpeg" alt="신규 & 휴면회원 만반잘부! 모두 혜택 받아가세요 이미지"
-                         class="event-slider__image" />
-                  </div>
-                  <div class="event-slider__desc">
-                    <p class="event-slider__title">신규 & 휴면회원 만반잘부! 모두 혜택 받아가세요 </p>
-                    <p class="event-slider__date">2021.02.01 ~ 2022.12.31</p>
-                  </div>
-                </a>
-              </swiper-slide>
-            </swiper>
+              <swiper
+                ref="swiperRef"
+                class="event-slider__body"
+                :options="swiperOption"
+              >
+                <swiper-slide class="event-slider__item">
+                  <a href="#" class="event-slider__link">
+                    <div class="event-slider__image-wrap">
+                      <img src="../assets/img_swiper-banner1.jpeg" alt="U+멤버십 고객 영화 2,000원 할인 이미지"
+                           class="event-slider__image"/>
+                    </div>
+                    <div class="event-slider__desc">
+                      <p class="event-slider__title">U+멤버십 고객 영화 2,000원 할인</p>
+                      <p class="event-slider__date">2021.02.01 ~ 2022.12.31</p>
+                    </div>
+                  </a>
+                </swiper-slide>
+                <swiper-slide class="event-slider__item">
+                  <a href="#" class="event-slider__link">
+                    <div class="event-slider__image-wrap">
+                      <img src="../assets/img_swiper-banner2.jpeg" alt="차이로 결제하고 캐시백+쿠폰 혜택 받으세요! 이미지"
+                           class="event-slider__image"/>
+                    </div>
+                    <div class="event-slider__desc">
+                      <p class="event-slider__title">차이로 결제하고 캐시백+쿠폰 혜택 받으세요!</p>
+                      <p class="event-slider__date">2021.02.01 ~ 2022.12.31</p>
+                    </div>
+                  </a>
+                </swiper-slide>
+                <swiper-slide class="event-slider__item">
+                  <a href="#" class="event-slider__link">
+                    <div class="event-slider__image-wrap">
+                      <img src="../assets/img_swiper-banner3.jpeg" alt="[알뜰교통카드 X 메가박스] 알뜰하게 영화보고 콤보 구매하는 방법 이미지"
+                           class="event-slider__image"/>
+                    </div>
+                    <div class="event-slider__desc">
+                      <p class="event-slider__title">[알뜰교통카드 X 메가박스] 알뜰하게 영화보고 콤보 구매하는 방법</p>
+                      <p class="event-slider__date">2021.02.01 ~ 2022.12.31</p>
+                    </div>
+                  </a>
+                </swiper-slide>
+                <swiper-slide class="event-slider__item">
+                  <a href="#" class="event-slider__link">
+                    <div class="event-slider__image-wrap">
+                      <img src="../assets/img_swiper-banner4.jpeg" alt="U+멤버십 고객 영화 2,000원 할인 이미지"
+                           class="event-slider__image"/>
+                    </div>
+                    <div class="event-slider__desc">
+                      <p class="event-slider__title">U+멤버십 고객 영화 2,000원 할인</p>
+                      <p class="event-slider__date">2021.02.01 ~ 2022.12.31</p>
+                    </div>
+                  </a>
+                </swiper-slide>
+                <swiper-slide class="event-slider__item">
+                  <a href="#" class="event-slider__link">
+                    <div class="event-slider__image-wrap">
+                      <img src="../assets/img_swiper-banner5.jpeg" alt="신규 & 휴면회원 만반잘부! 모두 혜택 받아가세요 이미지"
+                           class="event-slider__image"/>
+                    </div>
+                    <div class="event-slider__desc">
+                      <p class="event-slider__title">신규 & 휴면회원 만반잘부! 모두 혜택 받아가세요 </p>
+                      <p class="event-slider__date">2021.02.01 ~ 2022.12.31</p>
+                    </div>
+                  </a>
+                </swiper-slide>
+              </swiper>
           </div>
+          <!--    //스와이퍼     -->
           <div class="inner">
             <div class="contents__title-wrap">
               <h3 class="contents__sub-title">메가Pick</h3>
-              <more-button />
+              <more-button/>
             </div>
             <ul class="event">
               <li v-for="item in megaPickLists" :key="item.id" class="event__list">
@@ -125,7 +127,7 @@
 
             <div class="contents__title-wrap">
               <h3 class="contents__sub-title">영화</h3>
-              <more-button />
+              <more-button/>
             </div>
             <ul class="event">
               <li v-for="item in megaPickLists" :key="item.id" class="event__list">
@@ -135,7 +137,7 @@
 
             <div class="contents__title-wrap">
               <h3 class="contents__sub-title">극장</h3>
-              <more-button />
+              <more-button/>
             </div>
             <ul class="event">
               <li v-for="item in megaPickLists" :key="item.id" class="event__list">
@@ -145,7 +147,7 @@
 
             <div class="contents__title-wrap">
               <h3 class="contents__sub-title">제휴/할인</h3>
-              <more-button />
+              <more-button/>
             </div>
             <ul class="event">
               <li v-for="item in megaPickLists" :key="item.id" class="event__list">
@@ -155,7 +157,7 @@
 
             <div class="contents__title-wrap">
               <h3 class="contents__sub-title">시사회/무대인사</h3>
-              <more-button />
+              <more-button/>
             </div>
             <ul class="event">
               <li v-for="item in megaPickLists" :key="item.id" class="event__list">
@@ -337,7 +339,7 @@ export default {
         autoplay: {
           delay: 3000,
           disableOnInteraction: false
-        }
+        },
       },
       onClickAutoPlay: false
     }
@@ -353,6 +355,9 @@ export default {
   methods: {
     onClickTab (index) {
       this.selectedTab = index
+    },
+    handleAutoPlay(){
+      this.onClickAutoPlay = !this.onClickAutoPlay
     }
   }
 }
