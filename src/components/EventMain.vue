@@ -150,7 +150,7 @@ export default {
     SearchArea,
     Tab,
     Location,
-    Swiper,
+    Swiper
   },
   data () {
     return {
@@ -221,7 +221,7 @@ export default {
           title: '✌ 2022년 VIP 회원 혜택 안내 ✌',
           date: '2022.03.30 ~ 2022.04.13'
         }
-      ],
+      ]
     }
   },
   created () {
@@ -235,7 +235,7 @@ export default {
   methods: {
     onClickTab (index) {
       this.selectedTab = index
-    },
+    }
   }
 }
 </script>
@@ -287,18 +287,6 @@ export default {
         text-decoration: underline;
       }
     }
-  }
-}
-
-.event {
-  overflow: hidden;
-  margin: 0 -20px;
-  display: flex;
-  justify-content: flex-start;
-
-  &__list {
-    flex: 0 0 245px;
-    margin: 0 20px;
   }
 }
 
