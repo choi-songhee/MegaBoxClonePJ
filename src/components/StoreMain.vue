@@ -36,9 +36,27 @@
             </ul>
           </div>
         </div>
-        <div v-show="currentId == 1">tab cont2</div>
-        <div v-show="currentId == 2">tab cont3</div>
-        <div v-show="currentId == 3">tab cont4</div>
+        <div v-show="currentId == 1">
+          <div class="inner">
+            <ul class="event event--empty-title">
+              <li v-for="item in megaStoreLists" :key="item.id" class="event__list">
+                <ListItem :item="item" :showPrice="true"/>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div v-show="currentId == 2">
+          <div class="inner">
+            <ul class="event event--empty-title">
+              <li v-for="item in megaStoreLists" :key="item.id" class="event__list">
+                <ListItem :item="item" :showPrice="true"/>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div v-show="currentId == 3">
+          <EmptyResult :emptyMessage="emptyMessage"/>
+        </div>
       </div>
     </div>
 
@@ -50,6 +68,7 @@ import Tab from './Tab'
 import Location from './Location'
 import ListItem from './ListItem'
 import MoreButton from './MoreButton'
+import EmptyResult from './EmptyResult'
 
 export default {
   name: 'StoreMain',
@@ -57,11 +76,13 @@ export default {
     Tab,
     Location,
     ListItem,
-    MoreButton
+    MoreButton,
+    EmptyResult
   },
   data () {
     return {
       currentId: 0,
+      emptyMessage: '판매중인 상품이 없습니다.',
       list: [
         { id: 0, label: '새로운 상품' },
         { id: 1, label: '메가티켓' },
