@@ -320,7 +320,7 @@ export default {
           disableOnInteraction: false
         },
       },
-      onClickAutoPlay: false,
+      onClickAutoPlay : false,
     }
   },
   created () {
@@ -335,6 +335,9 @@ export default {
     onClickTab (index) {
       this.selectedTab = index
     },
+    onClickAutoPlay (){
+      this.swiper.autoplay.stop();
+    }
   }
 }
 </script>
