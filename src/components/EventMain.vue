@@ -228,6 +228,7 @@
         </div>
       </div>
     </div>
+    <top-button />
   </div>
 </template>
 
@@ -239,10 +240,12 @@ import Location from './Location'
 import ListItem from './ListItem'
 import {Swiper, SwiperSlide} from 'vue-awesome-swiper'
 import 'swiper/css/swiper.css'
+import TopButton from './TopButton'
 
 export default {
   name: 'EventMain',
   components: {
+    TopButton,
     ListItem,
     MoreButton,
     SearchArea,
