@@ -113,31 +113,50 @@
             </swiper>
           </div>
           <div class="inner">
-            <h3 class="contents__sub-title">메가Pick</h3>
+            <div class="contents__title-wrap">
+              <h3 class="contents__sub-title">메가Pick</h3>
+              <more-button />
+            </div>
             <ul class="event">
               <li v-for="item in megaPickLists" :key="item.id" class="event__list">
                 <ListItem :item="item"/>
               </li>
             </ul>
-            <h3 class="contents__sub-title">영화</h3>
+
+            <div class="contents__title-wrap">
+              <h3 class="contents__sub-title">영화</h3>
+              <more-button />
+            </div>
             <ul class="event">
               <li v-for="item in megaPickLists" :key="item.id" class="event__list">
                 <ListItem :item="item"/>
               </li>
             </ul>
-            <h3 class="contents__sub-title">극장</h3>
+
+            <div class="contents__title-wrap">
+              <h3 class="contents__sub-title">극장</h3>
+              <more-button />
+            </div>
             <ul class="event">
               <li v-for="item in megaPickLists" :key="item.id" class="event__list">
                 <ListItem :item="item"/>
               </li>
             </ul>
-            <h3 class="contents__sub-title">제휴/할인</h3>
+
+            <div class="contents__title-wrap">
+              <h3 class="contents__sub-title">제휴/할인</h3>
+              <more-button />
+            </div>
             <ul class="event">
               <li v-for="item in megaPickLists" :key="item.id" class="event__list">
                 <ListItem :item="item"/>
               </li>
             </ul>
-            <h3 class="contents__sub-title">시사회/무대인사</h3>
+
+            <div class="contents__title-wrap">
+              <h3 class="contents__sub-title">시사회/무대인사</h3>
+              <more-button />
+            </div>
             <ul class="event">
               <li v-for="item in megaPickLists" :key="item.id" class="event__list">
                 <ListItem :item="item"/>
