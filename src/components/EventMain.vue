@@ -332,14 +332,14 @@ export default {
           prevEl: '.swiper-button-prev'
         },
         controller: {
-          inverse: true,
+          inverse: true
         },
         autoplay: {
           delay: 3000,
           disableOnInteraction: false
-        },
+        }
       },
-      onClickAutoPlay: false,
+      onClickAutoPlay: false
     }
   },
   created () {
@@ -353,7 +353,7 @@ export default {
   methods: {
     onClickTab (index) {
       this.selectedTab = index
-    },
+    }
   }
 }
 </script>
