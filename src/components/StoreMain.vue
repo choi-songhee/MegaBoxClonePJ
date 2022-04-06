@@ -13,12 +13,33 @@
         </div>
       </div>
       <div class="tab-content">
-        <div v-show="currentId == 0">tab cont1</div>
+        <div v-show="currentId == 0">
+          <div class="inner">
+            <div class="contents__title-wrap">
+              <h3 class="contents__sub-title">메가티켓</h3>
+              <more-button />
+            </div>
+            <ul class="event">
+              <li v-for="item in megaStoreLists" :key="item.id" class="event__list">
+                <ListItem :item="item" :showPrice="true"/>
+              </li>
+            </ul>
+
+            <div class="contents__title-wrap">
+              <h3 class="contents__sub-title">팝콘/음료/굿즈</h3>
+              <more-button />
+            </div>
+            <ul class="event">
+              <li v-for="item in megaStoreLists" :key="item.id" class="event__list">
+                <ListItem :item="item" :showPrice="true"/>
+              </li>
+            </ul>
+          </div>
+        </div>
         <div v-show="currentId == 1">tab cont2</div>
         <div v-show="currentId == 2">tab cont3</div>
         <div v-show="currentId == 3">tab cont4</div>
       </div>
-      <h3 class="contents__sub-title">추천 이벤트</h3>
     </div>
 
   </div>
@@ -27,12 +48,16 @@
 <script>
 import Tab from './Tab'
 import Location from './Location'
+import ListItem from './ListItem'
+import MoreButton from './MoreButton'
 
 export default {
   name: 'StoreMain',
   components: {
     Tab,
-    Location
+    Location,
+    ListItem,
+    MoreButton
   },
   data () {
     return {
@@ -47,6 +72,41 @@ export default {
         {
           path: '/',
           depthName: '스토어'
+        }
+      ],
+      megaStoreLists: [
+        {
+          src: '../../static/dummy/images/img_dummy01.jpeg',
+          alt: '메가박스 오리지널 티켓 이미지',
+          title: '메가박스 오리지널 티켓 No.49 <모비우스>',
+          date: '2022.03.30 ~ 2022.04.13',
+          price: '36,000',
+          salePrice: '10,000',
+          quantity: '56',
+          eventLabel: 'EVENT'
+        },
+        {
+          src: '../../static/dummy/images/img_dummy02.jpeg',
+          alt: '2022 교향악축제 이미지',
+          title: '[클래식소사이어티] 2022 교향악축제 초대 이벤트',
+          date: '2022.03.30 ~ 2022.04.13',
+          salePrice: '30,000',
+          hotLabel: '대표상품'
+        },
+        {
+          src: '../../static/dummy/images/img_dummy03.jpeg',
+          alt: '봄시즌음료 이미지',
+          title: '[봄시즌음료]딸기라떼, 옥수수라떼 론칭',
+          date: '2022.03.30 ~ 2022.04.13',
+          price: '36,000',
+          salePrice: '10,000'
+        },
+        {
+          src: '../../static/dummy/images/img_dummy04.jpeg',
+          alt: '2022년 VIP 회원 혜택 이미지',
+          title: '✌ 2022년 VIP 회원 혜택 안내 ✌',
+          date: '2022.03.30 ~ 2022.04.13',
+          salePrice: '40,000'
         }
       ]
     }
