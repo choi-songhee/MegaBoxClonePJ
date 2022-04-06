@@ -17,8 +17,16 @@
   margin: 0;
   padding: 40px 0 0;
 
+  &__title-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 70px 0 24px;
+  }
+
   &__title {
     padding: 0 0 26px 0;
+    margin: 0;
     font-size: 28px;
     font-weight: 400;
     letter-spacing: -1px;
@@ -27,7 +35,7 @@
   }
 
   &__sub-title {
-    margin-top: 70px;
+    margin: 0;
     font-size: 24px;
     font-weight: 400;
     color: #503396;
@@ -49,4 +57,20 @@
   vertical-align: middle;
   background-position: 0 0;
   background-repeat: no-repeat;
+}
+
+.event {
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  gap: 40px;
+
+  &__list {
+    flex: 0 0 245px;
+    position: relative;
+  }
+
+  &--empty-title {
+    margin-top: 30px;
+  }
 }
