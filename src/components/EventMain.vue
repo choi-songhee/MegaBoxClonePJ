@@ -54,7 +54,7 @@
                 <a href="#" class="event-slider__link">
                   <div class="event-slider__image-wrap">
                     <img src="../assets/img_swiper-banner1.jpeg" alt="U+멤버십 고객 영화 2,000원 할인 이미지"
-                         class="event-slider__image">
+                         class="event-slider__image" />
                   </div>
                   <div class="event-slider__desc">
                     <p class="event-slider__title">U+멤버십 고객 영화 2,000원 할인</p>
@@ -62,11 +62,11 @@
                   </div>
                 </a>
               </swiper-slide>
-              <swiper-slide>
+              <swiper-slide class="event-slider__item">
                 <a href="#" class="event-slider__link">
                   <div class="event-slider__image-wrap">
                     <img src="../assets/img_swiper-banner2.jpeg" alt="차이로 결제하고 캐시백+쿠폰 혜택 받으세요! 이미지"
-                         class="event-slider__image">
+                         class="event-slider__image" />
                   </div>
                   <div class="event-slider__desc">
                     <p class="event-slider__title">차이로 결제하고 캐시백+쿠폰 혜택 받으세요!</p>
@@ -74,11 +74,11 @@
                   </div>
                 </a>
               </swiper-slide>
-              <swiper-slide>
+              <swiper-slide class="event-slider__item">
                 <a href="#" class="event-slider__link">
                   <div class="event-slider__image-wrap">
                     <img src="../assets/img_swiper-banner3.jpeg" alt="[알뜰교통카드 X 메가박스] 알뜰하게 영화보고 콤보 구매하는 방법 이미지"
-                         class="event-slider__image">
+                         class="event-slider__image" />
                   </div>
                   <div class="event-slider__desc">
                     <p class="event-slider__title">[알뜰교통카드 X 메가박스] 알뜰하게 영화보고 콤보 구매하는 방법</p>
@@ -86,11 +86,11 @@
                   </div>
                 </a>
               </swiper-slide>
-              <swiper-slide>
+              <swiper-slide class="event-slider__item">
                 <a href="#" class="event-slider__link">
                   <div class="event-slider__image-wrap">
                     <img src="../assets/img_swiper-banner4.jpeg" alt="U+멤버십 고객 영화 2,000원 할인 이미지"
-                         class="event-slider__image">
+                         class="event-slider__image" />
                   </div>
                   <div class="event-slider__desc">
                     <p class="event-slider__title">U+멤버십 고객 영화 2,000원 할인</p>
@@ -98,11 +98,11 @@
                   </div>
                 </a>
               </swiper-slide>
-              <swiper-slide>
+              <swiper-slide class="event-slider__item">
                 <a href="#" class="event-slider__link">
                   <div class="event-slider__image-wrap">
                     <img src="../assets/img_swiper-banner5.jpeg" alt="신규 & 휴면회원 만반잘부! 모두 혜택 받아가세요 이미지"
-                         class="event-slider__image">
+                         class="event-slider__image" />
                   </div>
                   <div class="event-slider__desc">
                     <p class="event-slider__title">신규 & 휴면회원 만반잘부! 모두 혜택 받아가세요 </p>
@@ -318,7 +318,7 @@ export default {
         autoplay: {
           delay: 3000,
           disableOnInteraction: false
-        }
+        },
       },
       onClickAutoPlay: false,
     }
@@ -334,9 +334,6 @@ export default {
   methods: {
     onClickTab (index) {
       this.selectedTab = index
-    },
-    onClickAutoPlay () {
-      this.$refs.eventSwiper.swiper.autoplay.stop()
     },
   }
 }
