@@ -408,18 +408,6 @@ export default {
   }
 }
 
-.event {
-  overflow: hidden;
-  margin: 0 -20px;
-  display: flex;
-  justify-content: flex-start;
-
-  &__list {
-    flex: 0 0 245px;
-    margin: 0 20px;
-  }
-}
-
 .event-slider {
   position: relative;
   height: 402px;
