@@ -35,6 +35,7 @@
         <div v-show="currentId == 1">tab cont2</div>
       </div>
     </div>
+    <top-button />
   </div>
 </template>
 
@@ -42,11 +43,13 @@
 import Tab from './Tab'
 import Location from './Location'
 import TextBanner from './TextBanner'
+import TopButton from './TopButton'
 import IconListItem from './IconListItem'
 
 export default {
   name: 'BenefitMain',
   components: {
+    TopButton,
     TextBanner,
     Tab,
     Location,
