@@ -131,8 +131,8 @@ export default {
         autoplay: {
           delay: 3000,
           disableOnInteraction: false
-        },
-      },
+        }
+      }
     }
   },
   methods: {

@@ -1,10 +1,10 @@
 <template>
-  <div className="container">
+  <div class="container">
     <Location :lists="depthList"/>
-    <div className="contents">
-      <div className="inner">
-        <h1 className="contents__title">메가박스 멤버십</h1>
-        <div className="tabs">
+    <div class="contents">
+      <div class="inner">
+        <h1 class="contents__title">메가박스 멤버십</h1>
+        <div class="tabs">
           <Tab
             v-for="item in list"
             v-bind="item" :key="item.id"
@@ -12,9 +12,9 @@
           />
         </div>
       </div>
-      <div className="tab-content">
+      <div class="tab-content">
         <div v-show="currentId == 0">
-          <div className="inner">
+          <div class="inner">
             <TextBanner
               class="text-banner--slash-type"
               :bannerTitle="bannerTitle"
