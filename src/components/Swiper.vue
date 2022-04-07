@@ -20,7 +20,7 @@
           type="button"
           class="event-slider__auto-play"
           @click="handleAutoPlay"
-          v-if="dataPlay"
+          v-if="dataAutoPlay"
         >
           <span>자동재생</span>
         </button>
@@ -120,7 +120,7 @@
 </template>
 
 <script>
-import {Swiper, SwiperSlide} from 'vue-awesome-swiper'
+import {Swiper, SwiperSlide } from 'vue-awesome-swiper'
 import 'swiper/css/swiper.css'
 
 export default {
@@ -131,9 +131,7 @@ export default {
   },
   data () {
     return {
-      dataPlay: false,
-      // handleAutoPlay: false,
-      // handleAutoStop: true,
+      dataAutoPlay: false,
       swiperOption: {
         slidesPerView: 2,
         spaceBetween: 40,
@@ -147,13 +145,10 @@ export default {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev'
         },
-        controller: {
-          inverse: true
-        },
         autoplay: {
           delay: 3000,
           disableOnInteraction: false
-        }
+        },
       }
     }
   },
@@ -162,17 +157,15 @@ export default {
       this.selectedTab = index
     },
     handleAutoPlay () {
-      this.dataPlay = !this.dataPlay
-      console.log(this.dataPlay);
-      console.log(this.$refs.swiperRef)
+      this.dataAutoPlay = !this.dataAutoPlay
+      // console.log(this.dataPlay)
+      // console.log(this.$refs.swiperRef)
       this.$refs.swiperRef.$swiper.autoplay.start()
-      console.log(this.$refs.swiperRef.$swiper.autoplay.running)
-    //   this.handleAutoStop = !this.handleAutoStop;
+      // console.log(this.$refs.swiperRef.$swiper.autoplay.running)
     },
     handleAutoStop () {
-      this.dataPlay = !this.dataPlay
+      this.dataAutoPlay = !this.dataAutoPlay
       this.$refs.swiperRef.$swiper.autoplay.stop()
-    //   this.handleAutoPlay = true;
     }
   }
 }
@@ -220,7 +213,7 @@ export default {
     height: 12px;
   }
 
-  &__auto-play, &__auto-stop  {
+  &__auto-play, &__auto-stop {
     display: block;
     float: left;
     height: 12px;
@@ -233,14 +226,13 @@ export default {
     width: 6px;
   }
 
-  &__auto-play{
+  &__auto-play {
     background-image: url("../assets/pc/icon_swiper-play.png");
   }
 
-  &__auto-stop{
+  &__auto-stop {
     background-image: url("../assets/pc/icon_swiper-pause.png");
   }
-
 
   &__body {
     overflow: hidden;
@@ -369,7 +361,8 @@ export default {
 .swiper-button-prev {
   left: -25px;
   background-image: url("../assets/pc/icon_swiper-button-prev.png");
-  &--color:hover{
+
+  &--color:hover {
     background-image: url("../assets/pc/icon_swiper-button-prev-color.png");
   }
 
@@ -382,7 +375,8 @@ export default {
 .swiper-button-next {
   right: -25px;
   background-image: url("../assets/pc/icon_swiper-button-next.png");
-  &--color:hover{
+
+  &--color:hover {
     background-image: url("../assets/pc/icon_swiper-button-next-color.png");
   }
 
