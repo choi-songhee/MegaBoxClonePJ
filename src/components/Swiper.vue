@@ -18,16 +18,24 @@
         <div class="swiper-button-next swiper-button-next--type-arrow" slot="button-next"></div>
         <button
           type="button"
-          class="event-slider__pause"
-          :class="{ on : !onClickAutoPlay }"
-          @click="handleAutoPlay">
-          <span v-show="!onClickAutoPlay">자동재생</span>
-          <span v-show="onClickAutoPlay">일시정지</span>
+          class="event-slider__auto-play"
+          @click="handleAutoPlay"
+          v-if="dataPlay"
+        >
+          <span>자동재생</span>
+        </button>
+        <button
+          type="button"
+          class="event-slider__auto-stop"
+          @click="handleAutoStop"
+          v-else
+        >
+          <span>일시정지</span>
         </button>
       </div>
       <div class="event-slider__control">
-        <div class="swiper-button-prev" slot="button-prev"></div>
-        <div class="swiper-button-next" slot="button-next"></div>
+        <div class="swiper-button-prev swiper-button-prev--color" slot="button-prev"></div>
+        <div class="swiper-button-next swiper-button-next--color" slot="button-next"></div>
       </div>
     </div>
     <swiper
@@ -95,6 +103,18 @@
           </div>
         </a>
       </swiper-slide>
+      <swiper-slide class="event-slider__item">
+        <a href="#" class="event-slider__link">
+          <div class="event-slider__image-wrap">
+            <img src="../assets/img_swiper-banner5.jpeg" alt="신규 & 휴면회원 만반잘부! 모두 혜택 받아가세요 이미지"
+                 class="event-slider__image"/>
+          </div>
+          <div class="event-slider__desc">
+            <p class="event-slider__title">신규 & 휴면회원 만반잘부! 모두 혜택 받아가세요 </p>
+            <p class="event-slider__date">2021.02.01 ~ 2022.12.31</p>
+          </div>
+        </a>
+      </swiper-slide>
     </swiper>
   </div>
 </template>
@@ -111,7 +131,9 @@ export default {
   },
   data () {
     return {
-      onClickAutoPlay: false,
+      dataPlay: false,
+      // handleAutoPlay: false,
+      // handleAutoStop: true,
       swiperOption: {
         slidesPerView: 2,
         spaceBetween: 40,
@@ -140,7 +162,17 @@ export default {
       this.selectedTab = index
     },
     handleAutoPlay () {
-      this.onClickAutoPlay = !this.onClickAutoPlay
+      this.dataPlay = !this.dataPlay
+      console.log(this.dataPlay);
+      console.log(this.$refs.swiperRef)
+      this.$refs.swiperRef.$swiper.autoplay.start()
+      console.log(this.$refs.swiperRef.$swiper.autoplay.running)
+    //   this.handleAutoStop = !this.handleAutoStop;
+    },
+    handleAutoStop () {
+      this.dataPlay = !this.dataPlay
+      this.$refs.swiperRef.$swiper.autoplay.stop()
+    //   this.handleAutoPlay = true;
     }
   }
 }
@@ -188,7 +220,7 @@ export default {
     height: 12px;
   }
 
-  &__pause, &__play {
+  &__auto-play, &__auto-stop  {
     display: block;
     float: left;
     height: 12px;
@@ -198,16 +230,17 @@ export default {
     font-size: 0;
     line-height: 0;
     background-color: transparent;
-  }
-
-  &__pause {
     width: 6px;
-    background-image: url("../assets/pc/icon_swiper-pause.png");
-
-    &.on {
-      background-image: url("../assets/pc/icon_swiper-play.png");
-    }
   }
+
+  &__auto-play{
+    background-image: url("../assets/pc/icon_swiper-play.png");
+  }
+
+  &__auto-stop{
+    background-image: url("../assets/pc/icon_swiper-pause.png");
+  }
+
 
   &__body {
     overflow: hidden;
@@ -336,6 +369,9 @@ export default {
 .swiper-button-prev {
   left: -25px;
   background-image: url("../assets/pc/icon_swiper-button-prev.png");
+  &--color:hover{
+    background-image: url("../assets/pc/icon_swiper-button-prev-color.png");
+  }
 
   &--type-arrow {
     left: 0;
@@ -346,6 +382,9 @@ export default {
 .swiper-button-next {
   right: -25px;
   background-image: url("../assets/pc/icon_swiper-button-next.png");
+  &--color:hover{
+    background-image: url("../assets/pc/icon_swiper-button-next-color.png");
+  }
 
   &--type-arrow {
     right: 0;
