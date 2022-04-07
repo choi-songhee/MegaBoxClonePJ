@@ -72,7 +72,7 @@
         </div>
       </div>
     </div>
-
+    <top-button />
   </div>
 </template>
 
@@ -82,10 +82,12 @@ import Location from './Location'
 import ListItem from './ListItem'
 import MoreButton from './MoreButton'
 import EmptyResult from './EmptyResult'
+import TopButton from './TopButton'
 
 export default {
   name: 'StoreMain',
   components: {
+    TopButton,
     Tab,
     Location,
     ListItem,
