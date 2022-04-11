@@ -5,7 +5,7 @@
     </div>
     <div class="icon-card__text-wrap">
       <strong class="icon-card__title">{{ item.title }}</strong>
-      <span class="icon-card__desc">{{ item.desc }}</span>
+      <span v-html="handleNewLine(item.desc)" class="icon-card__desc"></span>
       <Button v-show="item.buttonName" :buttonName="item.buttonName"/>
     </div>
   </div>
@@ -27,6 +27,11 @@ export default {
   },
   data () {
     return {
+    }
+  },
+  methods: {
+    handleNewLine () {
+      return this.item.desc.split('\n').join('<br />')
     }
   }
 }
