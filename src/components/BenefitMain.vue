@@ -392,12 +392,9 @@ export default {
 
   &__list {
     flex: 0 0 calc((100% - 40px) / 2);
-  }
-}
-.icon-card {
-  &__icon {
-    .icon--point-save {
-      background: url('../assets/icon_point-save.png');
+
+    .icon-card {
+      min-height: 210px;
     }
   }
 }

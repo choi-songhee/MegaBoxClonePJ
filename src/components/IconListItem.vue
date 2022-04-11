@@ -59,6 +59,7 @@ export default {
 
   &__text-wrap {
     padding: 40px 60px 35px 0;
+    flex: 0 0 calc(100% - 230px);
   }
 
   &__title {
