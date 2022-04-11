@@ -55,11 +55,6 @@ export default {
     min-height: 364px;
 
     &:hover {
-      .card__title,
-      .card__date {
-        text-decoration: underline;
-      }
-
       border: 1px solid #503396;
     }
   }

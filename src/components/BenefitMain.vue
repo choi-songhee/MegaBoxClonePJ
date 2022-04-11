@@ -81,17 +81,57 @@ export default {
       ],
       BenefitLists: [
         {
-          iconBgClass: 'icon--point-save',
+          iconImg: require('@/assets/icon_point-save.png'),
+          iconAlt: '포인트 적립 아이콘',
+          iconSize: 72,
           title: '포인트 적립',
           desc: '영화 티켓, 매점 상품 구매 시 등급에 따라\n' +
             '5 ~ 10% 포인트를 적립할 수 있어요',
           buttonName: '자세히 보기'
         },
         {
-          src: '../../static/dummy/images/img_dummy01.jpeg',
+          iconImg: require('@/assets/icon_point-present.png'),
+          iconAlt: '포인트 선물 아이콘',
+          iconSize: 64,
           title: '포인트 선물',
           desc: '영화 티켓, 매점 상품 구매 시 등급에 따라\n' +
             '5 ~ 10% 포인트를 적립할 수 있어요'
+        },
+        {
+          iconImg: require('@/assets/icon_point-use.png'),
+          iconAlt: '포인트 사용 아이콘',
+          iconSize: 63,
+          title: '포인트 적립',
+          desc: '영화 티켓, 매점 상품 구매 시 등급에 따라\n' +
+            '5 ~ 10% 포인트를 적립할 수 있어요',
+          buttonName: '자세히 보기'
+        },
+        {
+          iconImg: require('@/assets/icon_point-birthday.png'),
+          iconAlt: '생일 축하 쿠폰 아이콘',
+          iconSize: 62,
+          title: '포인트 선물',
+          desc: '영화 티켓, 매점 상품 구매 시 등급에 따라\n' +
+            '5 ~ 10% 포인트를 적립할 수 있어요',
+          buttonName: '자세히 보기'
+        },
+        {
+          iconImg: require('@/assets/icon_point-vip.png'),
+          iconAlt: 'VIP LOUNGE 아이콘',
+          iconSize: 65,
+          title: '포인트 적립',
+          desc: '영화 티켓, 매점 상품 구매 시 등급에 따라\n' +
+            '5 ~ 10% 포인트를 적립할 수 있어요',
+          buttonName: 'VIP LOUNGE'
+        },
+        {
+          iconImg: require('@/assets/icon_point-special.png'),
+          iconAlt: '스페셜 멤버십 아이콘',
+          iconSize: 61,
+          title: '포인트 선물',
+          desc: '영화 티켓, 매점 상품 구매 시 등급에 따라\n' +
+            '5 ~ 10% 포인트를 적립할 수 있어요',
+          buttonName: '스페셜멤버십 안내'
         }
       ]
     }
@@ -119,18 +159,16 @@ export default {
 
 .benefit {
   display: flex;
+  flex-wrap: wrap;
   gap: 40px;
 
   &__list {
     flex: 0 0 calc((100% - 40px) / 2);
-  }
-}
 
-.icon-card {
-  &__icon {
-    .icon--point-save {
-      background: url('../assets/icon_point-save.png');
+    .icon-card {
+      min-height: 210px;
     }
   }
 }
+
 </style>
