@@ -20,7 +20,7 @@
               :bannerTitle="bannerTitle"
               :bannerDesc="bannerDesc"
             />
-            <div class="benefit-area">
+            <section class="benefit-area">
               <div class="contents__title-wrap">
                 <h3 class="contents__sub-title">메가박스 멤버십 혜택</h3>
               </div>
@@ -29,7 +29,101 @@
                   <IconListItem :item="item" class="benefit__item"/>
                 </li>
               </ul>
-            </div>
+            </section>
+            <section class="benefit-area">
+              <div class="contents__title-wrap">
+                <h3 class="contents__sub-title">포인트 적립</h3>
+              </div>
+              <h4 class="benefit-area__subject">포인트 기본 적립</h4>
+              <ul class="dot-lists">
+                <li class="dot-lists__list">
+                  영화 티켓 구매 시 유료 결제 금액의 <span class="c-gblue">5~10%</span> 적립
+                  <ul class="dash-lists">
+                    <li class="dash-lists__list">일반회원 : 5% 적립</li>
+                    <li class="dash-lists__list">VIP회원 : 10% 적립 (단, VIP 선정 기준은 5%만 반영)</li>
+                  </ul>
+                </li>
+                <li class="dot-lists__list">매점 유료 결제 금액의 <span class="c-gblue">2%</span> 적립</li>
+                <li class="dot-lists__list">결제가 완료된 후 적립 예정 포인트로 적립되며 <span class="c-gblue">영화의 경우 상영일 익일, 매점의 경우 구매일 익일</span> 사용 가능한 포인트(가용 포인트) 로 전환됩니다.</li>
+                <li class="dot-lists__list">회원이 로그인 후 온라인 서비스를 이용 하거나 현장 매표소, 키오스크에서 멤버십 카드 제시 또는 회원임을 확인 할 수 있는 정보를 제공하여야 포인트가 적립됩니다.</li>
+                <li class="dot-lists__list">메가박스 및 제휴사 할인, 포인트 결제 등을 통해 할인 받은 금액을 제외한 실제 고객님께서 현금, 신용카드 등으로 유료 결제한 금액 기준으로 적립됩니다.</li>
+                <li class="dot-lists__list">일부 영화, 상품, 극장, 결제 수단의 경우 적립이 되지 않거나 별도의 적립률이 적용될 수 있으며 상세 내용은 해당 상품, 극장 등에 별도 공지합니다.</li>
+                <li class="dot-lists__list">VIP 선정 시 기준이 되는 포인트입니다.</li>
+                <li class="dot-lists__list">포인트 적립은 티켓에 노출된 영화 시작 시간 이전까지만 가능하며, 영화 상영 및 매점 상품 구매 이후 사후 적립은 불가능합니다.</li>
+              </ul>
+              <h4 class="benefit-area__subject">포인트 적립 제외 극장</h4>
+              <ul class="dot-lists">
+                <li class="dot-lists__list">
+                  일부 극장의 경우 매점 구매 시 포인트 적립이 불가합니다.
+                  <ul class="dash-lists">
+                    <li class="dash-lists__list">매점 적립 제외 극장: 경산하양, 경주, 공주, 김천, 남양주, 남원, 남춘천, 북대구(칠곡), 속초, 순천, 아트나인, 안산중앙, 원주, 인천논현, 제천, 진천, 첨단, 청주사창, 충주, 파주금촌</li>
+                  </ul>
+                </li>
+                <li class="dot-lists__list">더 부티크 프라이빗 관람 시 포인트 적립이 불가합니다.</li>
+              </ul>
+              <h4 class="benefit-area__subject">기타 적립 안내</h4>
+              <ul class="dot-lists">
+                <li class="dot-lists__list">단체 영화 관람 및 매점 구매를 통해 가격 할인을 받은 경우 포인트는 적립되지 않습니다.</li>
+                <li class="dot-lists__list">메가박스에서 발행된 관람권은 영화 가격과 무관하게 관람권이 판매된 가격 기준으로 포인트가 적립됩니다.</li>
+                <li class="dot-lists__list">모바일 쿠폰(기프티콘, 쇼 등)으로 결제된 티켓은 포인트 적립이 제외됩니다.</li>
+                <li class="dot-lists__list">위탁예매사(인터파크, YES24 등)을 통한 티켓 예매 시 회원정보가 동일할 경우 포인트가 적립됩니다.</li>
+              </ul>
+            </section>
+            <section class="benefit-area">
+              <div class="contents__title-wrap">
+                <h3 class="contents__sub-title">포인트 사용</h3>
+              </div>
+            </section>
+            <section class="benefit-area">
+              <div class="contents__title-wrap">
+                <h3 class="contents__sub-title">유효기간 및 소멸</h3>
+              </div>
+              <h4 class="benefit-area__subject">포인트 유효기간</h4>
+              <ul class="dot-lists">
+                <li class="dot-lists__list">기본 적립 포인트 : 적립일로부터 24개월이 지난 해당월 말일 (티켓 및 매점 유료 구매 시)</li>
+                <li class="dot-lists__list">선물 받은 포인트 : 선물 받은 날로부터 3개월이 지난 해당월 말일</li>
+                <li class="dot-lists__list">이벤트 적립 포인트 : 이벤트 마다 유효기간이 상이(개별 확인 필요)</li>
+              </ul>
+              <h4 class="benefit-area__subject">포인트 소멸</h4>
+              <ul class="dot-lists">
+                <li class="dot-lists__list">유효기간이 경과된 포인트는 매월 말일 영업 종료 후 포인트가 자동 소멸됩니다.</li>
+                <li class="dot-lists__list">소멸 기준은 잔여 가용 포인트 중 유효기간이 가장 짧은 포인트부터 소멸되며, 소멸된 포인트는 복구되지 않습니다.</li>
+                <li class="dot-lists__list">
+                  보유 포인트의 소멸 예정일이 도래할 경우, 포인트 소멸과 관련된 내용을 최소 15일 전에 문자 또는 이메일 등으로 고지합니다.<br />
+                  또한, 홈페이지 및 모바일 웹/앱 로그인 시 소멸 예정 포인트를 확인하실 수 있습니다.
+                </li>
+              </ul>
+            </section>
+            <section class="benefit-area">
+              <div class="contents__title-wrap">
+                <h3 class="contents__sub-title">생일 축하 쿠폰</h3>
+              </div>
+              <h4 class="benefit-area__subject">생일 축하 쿠폰 증정!</h4>
+              <ul class="dot-lists">
+                <li class="dot-lists__list">생일 쿠폰은 메가박스 회원에게만 제공됩니다.</li>
+                <li class="dot-lists__list">생일 쿠폰은 1년에 1회 지급되며, 한 번 발급되면 추가 발급되지 않습니다.</li>
+                <li class="dot-lists__list">
+                  생일 쿠폰은 회원정보에 등록된 생일을 기준으로 발급됩니다.
+                  <ul class="dash-lists">
+                    <li class="dash-lists__list">생일 2주전 쿠폰이 발행되며, 유효기간은 발행일로부터 4주입니다. (예 : 3월 16일 생일인 경우 3월 2일 발급, 3월 30일까지 사용 가능)</li>
+                  </ul>
+                </li>
+                <li class="dot-lists__list">발행된 쿠폰은 로그인 후 ‘나의 메가박스 > 쿠폰’에서 확인 가능합니다.</li>
+                <li class="dot-lists__list">쿠폰 발급일 기준, 정상 회원에게만 제공됩니다. (쿠폰 발급일 이후 가입, 휴면 회원 상태 고객 등 제외)</li>
+                <li class="dot-lists__list">쿠폰 내용, 지급 일정, 사용 방법 등은 내부 사정에 따라 변경될 수 있습니다.</li>
+              </ul>
+            </section>
+            <section class="benefit-area">
+              <div class="contents__title-wrap">
+                <h3 class="contents__sub-title">멤버십 카드</h3>
+              </div>
+              <ul class="dot-lists">
+                <li class="dot-lists__list">극장 이용 시 멤버십 카드를 꼭 제시해주세요!</li>
+                <li class="dot-lists__list">메가박스 회원가입 시 모바일 카드가 자동 발급됩니다.</li>
+                <li class="dot-lists__list">플라스틱 카드 수령을 원하시는 분은 메가박스 현장 매표소에서 받으실 수 있습니다.</li>
+                <li class="dot-lists__list">플라스틱 카드를 수령하신 경우 홈페이지 ‘나의 메가박스 > 멤버십 포인트 > 멤버십 카드관리’에서 등록 후 이용하실 수 있습니다.</li>
+              </ul>
+            </section>
           </div>
         </div>
         <div v-show="currentId == 1">
@@ -97,17 +191,57 @@ export default {
       ],
       BenefitLists: [
         {
-          iconBgClass: 'icon--point-save',
+          iconImg: require('@/assets/icon_point-save.png'),
+          iconAlt: '포인트 적립 아이콘',
+          iconSize: 72,
           title: '포인트 적립',
           desc: '영화 티켓, 매점 상품 구매 시 등급에 따라\n' +
             '5 ~ 10% 포인트를 적립할 수 있어요',
           buttonName: '자세히 보기'
         },
         {
-          src: '../../static/dummy/images/img_dummy01.jpeg',
+          iconImg: require('@/assets/icon_point-present.png'),
+          iconAlt: '포인트 선물 아이콘',
+          iconSize: 64,
           title: '포인트 선물',
           desc: '영화 티켓, 매점 상품 구매 시 등급에 따라\n' +
             '5 ~ 10% 포인트를 적립할 수 있어요'
+        },
+        {
+          iconImg: require('@/assets/icon_point-use.png'),
+          iconAlt: '포인트 사용 아이콘',
+          iconSize: 63,
+          title: '포인트 적립',
+          desc: '영화 티켓, 매점 상품 구매 시 등급에 따라\n' +
+            '5 ~ 10% 포인트를 적립할 수 있어요',
+          buttonName: '자세히 보기'
+        },
+        {
+          iconImg: require('@/assets/icon_point-birthday.png'),
+          iconAlt: '생일 축하 쿠폰 아이콘',
+          iconSize: 62,
+          title: '포인트 선물',
+          desc: '영화 티켓, 매점 상품 구매 시 등급에 따라\n' +
+            '5 ~ 10% 포인트를 적립할 수 있어요',
+          buttonName: '자세히 보기'
+        },
+        {
+          iconImg: require('@/assets/icon_point-vip.png'),
+          iconAlt: 'VIP LOUNGE 아이콘',
+          iconSize: 65,
+          title: '포인트 적립',
+          desc: '영화 티켓, 매점 상품 구매 시 등급에 따라\n' +
+            '5 ~ 10% 포인트를 적립할 수 있어요',
+          buttonName: 'VIP LOUNGE'
+        },
+        {
+          iconImg: require('@/assets/icon_point-special.png'),
+          iconAlt: '스페셜 멤버십 아이콘',
+          iconSize: 61,
+          title: '포인트 선물',
+          desc: '영화 티켓, 매점 상품 구매 시 등급에 따라\n' +
+            '5 ~ 10% 포인트를 적립할 수 있어요',
+          buttonName: '스페셜멤버십 안내'
         }
       ]
     }
@@ -131,9 +265,22 @@ export default {
   .contents__title-wrap {
     margin-bottom: 16px;
   }
+
+  &__subject {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #222;
+    line-height: 1.1;
+  }
+
+  .dot-lists + .benefit-area__subject {
+    margin-top: 30px;
+  }
 }
 .benefit {
   display: flex;
+  flex-wrap: wrap;
   gap: 40px;
 
   &__list {

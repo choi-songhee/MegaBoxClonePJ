@@ -1,7 +1,7 @@
 <template>
   <div class="icon-card">
     <div class="icon-card__icon-wrap">
-      <i :class="['icon-card__icon', item.iconBgClass]"></i>
+      <img :src="item.iconImg" :alt="item.iconAlt" class="icon-card__icon" :width="iconSize">
     </div>
     <div class="icon-card__text-wrap">
       <strong class="icon-card__title">{{ item.title }}</strong>
@@ -41,11 +41,14 @@ export default {
 
   &__icon-wrap {
     flex: 0 0 190px;
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 50px;
   }
 
   &__icon {
     display: inline-block;
-    width: 100%;
     height: auto;
   }
 

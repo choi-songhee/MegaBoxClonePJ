@@ -224,9 +224,6 @@ export default {
       ]
     }
   },
-  created () {
-    // this.selectedTab = this.subTabs[0].id
-  },
   computed: {
     current () {
       return this.list.find(el => el.id === this.currentId) || {}
@@ -285,6 +282,19 @@ export default {
       &:focus,
       &:hover {
         text-decoration: underline;
+      }
+    }
+  }
+}
+
+::v-deep {
+  .card {
+    &__link {
+      &:hover {
+        .card__title,
+        .card__date {
+          text-decoration: underline !important;
+        }
       }
     }
   }
