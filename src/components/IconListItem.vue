@@ -1,5 +1,5 @@
 <template>
-  <div class="icon-card">
+  <div :class="['icon-card', {'icon-card--coupon': couponType}]">
     <div class="icon-card__icon-wrap">
       <img :src="item.iconImg" :alt="item.iconAlt" class="icon-card__icon" :width="iconSize">
     </div>
@@ -20,6 +20,10 @@ export default {
     item: {
       type: Object,
       default: () => {}
+    },
+    couponType: {
+      type: Boolean,
+      default: false
     }
   },
   components: {
@@ -76,6 +80,17 @@ export default {
     margin-top: 10px;
     font-size: 15px;
     color: #444;
+  }
+
+  &--coupon {
+    min-height: 170px;
+    background: url('../assets/bg_coupon.png') no-repeat 0 0;
+    border: 0;
+
+    .icon-card__icon-wrap {
+      align-items: center;
+      padding-top: 0;
+    }
   }
 }
 </style>
