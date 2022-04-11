@@ -241,6 +241,11 @@
               </div>
             </div>
           </div>
+          <ul class="benefit">
+            <li v-for="item in vipBenefit" :key="item.id" class="benefit__list">
+              <IconListItem :item="item" class="benefit__item" :couponType="true"/>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -342,6 +347,22 @@ export default {
             '스페셜 멤버십 추가혜택도 받을 수 있어요',
           buttonName: '스페셜멤버십 안내'
         }
+      ],
+      vipBenefit: [
+        {
+          iconImg: require('@/assets/icon_point-save.png'),
+          iconAlt: '영화 아이콘',
+          iconSize: 72,
+          title: '영화',
+          desc: 'VIP 영화관람 쿠폰'
+        },
+        {
+          iconImg: require('@/assets/icon_point-save.png'),
+          iconAlt: '영화 아이콘',
+          iconSize: 72,
+          title: '영화',
+          desc: 'VIP 영화관람 쿠폰'
+        }
       ]
     }
   },
@@ -385,6 +406,7 @@ export default {
     background-color: #f2f4f5;
   }
 }
+
 .benefit {
   display: flex;
   flex-wrap: wrap;
@@ -395,13 +417,27 @@ export default {
 
     .icon-card {
       min-height: 210px;
+
+      &--coupon {
+        min-height: 170px;
+        max-height: 170px;
+        background: url('../assets/bg_coupon.png') no-repeat 0 0;
+        border: 0;
+
+        .icon-card__icon-wrap {
+          align-items: center;
+          padding-top: 0;
+        }
+      }
     }
   }
 }
+
 .tab-content{
   width: 1100px;
   margin: 0 auto;
 }
+
 .benefit-vip-lounge{
   background-image: url(../assets/bg_benefit-common-lounge.png);
   overflow: hidden;
@@ -454,6 +490,7 @@ export default {
     border-radius: 4px;
   }
 }
+
 .icon-question-circle-big{
   width: 93px;
   height: 93px;
