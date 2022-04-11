@@ -242,11 +242,6 @@
               </div>
             </div>
           </div>
-            <ul class="benefit">
-              <li v-for="item in vipBenefit" :key="item.id" class="benefit__list">
-                <IconListItem :item="item" class="benefit__item" :couponType="true"/>
-              </li>
-            </ul>
           </div>
           <div class="benefit-slider">
             <Swiper></Swiper>
