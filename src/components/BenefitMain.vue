@@ -127,7 +127,8 @@
           </div>
         </div>
         <div v-show="currentId == 1">
-          <div class="benefit-vip-lounge">
+          <div class="inner">
+            <div class="benefit-vip-lounge">
             <div class="benefit-vip-lounge__title-area">
               <p class="benefit-vip-lounge__title">MEGABOX VIP</p>
               <p class="benefit-vip-lounge__text">메가박스의 더 많은 혜택을 누릴 수 있는 방법!</p>
@@ -142,6 +143,29 @@
               </div>
             </div>
           </div>
+          </div>
+          <div class="benefit-slider">
+            <Swiper></Swiper>
+          </div>
+          <div class="inner">
+            <section class="benefit-vip-selection">
+              <div class="contents__title-wrap">
+                <h3 class="contents__sub-title">VIP 선정 기준</h3>
+              </div>
+              <h4 class="benefit-area__subject">2022년 VIP 선정 기준</h4>
+              <div class="benefit-vip-selection__box-area">
+                <div v-for="box in vipSelectionList" :key="box.id" class="benefit-vip-selection__box">
+                  <img :src="box.iconImg" :alt="box.iconAlt" class="benefit-vip-selection__icon">
+                  <div class="benefit-vip-selection__text-area">
+                    <p class="benefit-vip-selection__title">{{box.title}}</p>
+                    <p class="benefit-vip-selection__text">{{box.text}}</p>
+                    <p class="benefit-vip-selection__text">{{box.text2}}</p>
+                    <p class="benefit-vip-selection__text">{{box.text3}}</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
         </div>
       </div>
     </div>
@@ -155,6 +179,7 @@ import Location from './Location'
 import TextBanner from './TextBanner'
 import TopButton from './TopButton'
 import IconListItem from './IconListItem'
+import Swiper from './Swiper'
 
 export default {
   name: 'BenefitMain',
@@ -163,7 +188,8 @@ export default {
     TextBanner,
     Tab,
     Location,
-    IconListItem
+    IconListItem,
+    Swiper
   },
   data () {
     return {
@@ -243,6 +269,35 @@ export default {
             '5 ~ 10% 포인트를 적립할 수 있어요',
           buttonName: '스페셜멤버십 안내'
         }
+      ],
+      vipSelectionList: [
+        {
+          iconImg: require('@/assets/bg_benefit-vip-selection-vip.png'),
+          iconAlt:'VIP 선정기준 아이콘',
+          title: 'VIP',
+          text:'2021년 누적 승급 포인트',
+          text2:'2,000 포인트 이상\n' +
+            '(2021년 VIP 회원)',
+          text3:'6,000 포인트 이상\n' +
+            '(2021년 일반 회원)'
+        },
+        {
+          iconImg: require('@/assets/bg_benefit-vip-selection-vip-p.png'),
+          iconAlt:'VIP PREMIUM 선정기준 아이콘',
+          title: 'VIP PREMIUM',
+          text:'2021년 누적 승급포인트\n' +
+            '11,000 포인트 이상'
+        },
+        {
+          iconImg: require('@/assets/bg_benefit-vip-selection-vvip.png'),
+          iconAlt:'VVIP 선정기준 아이콘',
+          title: 'VVIP',
+          text:'2021년 누적 승급포인트\n' +
+            '27,000 포인트 이상',
+          text2:'또는',
+          text3:'서로 다른 영화\n' +
+            '50편 이상 유료 관람'
+        }
       ]
     }
   },
@@ -293,10 +348,6 @@ export default {
       background: url('../assets/icon_point-save.png');
     }
   }
-}
-.tab-content{
-  width: 1100px;
-  margin: 0 auto;
 }
 .benefit-vip-lounge{
   background-image: url(../assets/bg_benefit-common-lounge.png);
@@ -354,5 +405,13 @@ export default {
   width: 93px;
   height: 93px;
   background-image: url("../assets/icon_question-circle-big.png");
+}
+.benefit-slider{
+  margin: 70px 0;
+}
+.benefit-vip-selection{
+  &__box-area{
+    overflow: hidden;
+  }
 }
 </style>
