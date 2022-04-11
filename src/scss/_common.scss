@@ -74,3 +74,51 @@
     margin-top: 30px;
   }
 }
+
+.dot-lists {
+  &__list {
+    position: relative;
+    margin-top: 2px;
+    padding-left: 8px;
+    font-size: 15px;
+    color: #444;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 9px;
+      left: 0;
+      background-color: #503396;
+      width: 3px;
+      height: 3px;
+    }
+  }
+}
+
+.dash-lists {
+  margin-top: 5px;
+
+  &__list {
+    position: relative;
+    margin-top: 5px;
+    padding-left: 11px;
+    font-size: 14px;
+    color: #666;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 10px;
+      left: 0;
+      background-color: #333;
+      width: 4px;
+      height: 1px;
+    }
+  }
+}
+
+.c-gblue {
+  color: #01738b !important;
+}
