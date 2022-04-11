@@ -253,16 +253,53 @@
               </div>
               <h4 class="benefit-area__subject">2022년 VIP 선정 기준</h4>
               <div class="benefit-vip-selection__box-area">
-                <div v-for="box in vipSelectionList" :key="box.id" class="benefit-vip-selection__box">
-                  <img :src="box.iconImg" :alt="box.iconAlt" class="benefit-vip-selection__icon">
-                  <div class="benefit-vip-selection__text-area">
-                    <p class="benefit-vip-selection__title">{{box.title}}</p>
-                    <p class="benefit-vip-selection__text">{{box.text}}</p>
-                    <p class="benefit-vip-selection__text">{{box.text2}}</p>
-                    <p class="benefit-vip-selection__text">{{box.text3}}</p>
-                  </div>
+                <div class="benefit-vip-selection__box benefit-vip-selection__box--vip">
+                   <p class="benefit-vip-selection__title">VIP</p>
+                  <p class="benefit-vip-selection__text">
+                    2021년 누적 승급 포인트<br>
+                    <br>
+                    2,000 포인트 이상<br>
+                    (2021년 VIP 회원)<br>
+                    <br>
+                    6,000 포인트 이상<br>
+                    (2021년 일반 회원)</p>
+                </div>
+                <div class="benefit-vip-selection__box benefit-vip-selection__box--premium">
+                  <p class="benefit-vip-selection__title">VIP PREMIUM</p>
+                  <p class="benefit-vip-selection__text">
+                    2021년 누적 승급포인트<br>
+                    11,000 포인트 이상
+                  </p>
+                </div>
+                <div class="benefit-vip-selection__box benefit-vip-selection__box--vvip">
+                  <p class="benefit-vip-selection__title">VVIP</p>
+                  <p class="benefit-vip-selection__text">
+                    2021년 누적 승급포인트<br>
+                    27,000 포인트 이상<br>
+                    <br>
+                    또는<br>
+                    <br>
+                    서로 다른 영화<br>
+                    50편 이상 유료 관람
+                  </p>
                 </div>
               </div>
+              <div class="benefit-vip-selection__period-area">
+                <p class="dot-lists__list">선정기간 : 2021.01.01 ~ 2021.12.31 (상영일 기준)</p>
+                <p class="dot-lists__list">자격기간 : 2022.03.02 ~ 2023.02.28 (상영일 기준)</p>
+              </div>
+              <ul  class="benefit-vip-selection__ul">
+                <li class="dot-lists__list">VIP 등급 선정 기준 및 혜택은 매년 상이할 수 있습니다.</li>
+                <li class="dot-lists__list">VIP 회원 혜택은 내부 사정에 의하여 변경 또는 종료될 수 있습니다.</li>
+                <li class="dot-lists__list">VIP 회원 추가 적립 포인트, 선물 받은 포인트, 이벤트 적립 포인트, 제휴처 적립 포인트 등은 VIP 산정에서 제외됩니다.</li>
+                <li class="dot-lists__list">“서로 다른 영화”는 선정 기간 내 멤버십 포인트 적립된 영화 중 서로 다른 영화를 의미합니다. (동일 영화는 1편으로 산정)</li>
+              </ul>
+            </section>
+            <section class="benefit-vip-benefit">
+              <div class="contents__title-wrap">
+                <h3 class="contents__sub-title">VIP 멤버십 혜택</h3>
+              </div>
+              <h4 class="benefit-area__subject">VIP 쿠폰북</h4>
             </section>
           </div>
         </div>
@@ -367,35 +404,6 @@ export default {
           desc: '메가박스 멤버십 혜택에\n' +
             '스페셜 멤버십 추가혜택도 받을 수 있어요',
           buttonName: '스페셜멤버십 안내'
-        }
-      ],
-      vipSelectionList: [
-        {
-          iconImg: require('@/assets/bg_benefit-vip-selection-vip.png'),
-          iconAlt:'VIP 선정기준 아이콘',
-          title: 'VIP',
-          text:'2021년 누적 승급 포인트',
-          text2:'2,000 포인트 이상\n' +
-            '(2021년 VIP 회원)',
-          text3:'6,000 포인트 이상\n' +
-            '(2021년 일반 회원)'
-        },
-        {
-          iconImg: require('@/assets/bg_benefit-vip-selection-vip-p.png'),
-          iconAlt:'VIP PREMIUM 선정기준 아이콘',
-          title: 'VIP PREMIUM',
-          text:'2021년 누적 승급포인트\n' +
-            '11,000 포인트 이상'
-        },
-        {
-          iconImg: require('@/assets/bg_benefit-vip-selection-vvip.png'),
-          iconAlt:'VVIP 선정기준 아이콘',
-          title: 'VVIP',
-          text:'2021년 누적 승급포인트\n' +
-            '27,000 포인트 이상',
-          text2:'또는',
-          text3:'서로 다른 영화\n' +
-            '50편 이상 유료 관람'
         }
       ]
     }
@@ -513,9 +521,65 @@ export default {
 .benefit-slider{
   margin: 70px 0;
 }
-.benefit-vip-selection{
-  &__box-area{
+.benefit-vip-selection {
+  &__box-area {
     overflow: hidden;
+    display: flex;
+  }
+  &__box {
+    float: left;
+    width: 350px;
+    height: 245px;
+    margin: 0 0 0 25px;
+    padding: 40px 0 0 142px;
+    border: 1px solid #ebebeb;
+    border-radius: 10px;
+    background-color: #fff;
+    background-position: 40px 40px;
+    background-repeat: no-repeat;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &--vip {
+      background-image: url("../assets/bg_benefit-vip-selection-vip.png");
+    }
+
+    &--premium {
+      background-image: url("../assets/bg_benefit-vip-selection-vip-p.png");
+    }
+
+    &--vvip {
+      background-image: url("../assets/bg_benefit-vip-selection-vvip.png");
+    }
+  }
+  &__title {
+    font-size: 19px;
+    line-height: 1.1;
+    margin: 0;
+  }
+  &__text {
+    padding: 15px 0 0 0;
+    color: #222;
+  }
+  &__period-area {
+    margin: 20px 0 0 0;
+    padding: 15px 0;
+    border: 1px solid #eeeff0;
+    border-radius: 10px;
+    background-color: #f9f9fa;
+    text-align: center;
+    .dot-lists__list{
+      display: inline-block;
+      position: relative;
+      margin: 0 10px;
+      padding: 0 0 0 10px;
+      line-height: 1.1;
+    }
+  }
+  &__ul{
+    margin-top: 15px;
   }
 }
 </style>
