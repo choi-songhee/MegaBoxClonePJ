@@ -311,7 +311,7 @@ export default {
           iconImg: require('@/assets/icon_point-use.png'),
           iconAlt: '포인트 사용 아이콘',
           iconSize: 63,
-          title: '포인트 적립',
+          title: '포인트 사용',
           desc: '보유한 포인트로 원하는 영화 보고\n' +
             '팝콘도 구매하세요',
           buttonName: '자세히 보기'
@@ -320,7 +320,7 @@ export default {
           iconImg: require('@/assets/icon_point-birthday.png'),
           iconAlt: '생일 축하 쿠폰 아이콘',
           iconSize: 62,
-          title: '포인트 선물',
+          title: '생일 축하 쿠폰',
           desc: '회원이라면 누구나 생일 축하 쿠폰을 드려요',
           buttonName: '자세히 보기'
         },
@@ -328,7 +328,7 @@ export default {
           iconImg: require('@/assets/icon_point-vip.png'),
           iconAlt: 'VIP LOUNGE 아이콘',
           iconSize: 65,
-          title: '포인트 적립',
+          title: 'VIP LOUNGE',
           desc: 'VIP 회원이라면\n' +
             '더 많은 추가 혜택을 받을 수 있어요',
           buttonName: 'VIP LOUNGE'
@@ -337,7 +337,7 @@ export default {
           iconImg: require('@/assets/icon_point-special.png'),
           iconAlt: '스페셜 멤버십 아이콘',
           iconSize: 61,
-          title: '포인트 선물',
+          title: '스페셜 멤버십',
           desc: '메가박스 멤버십 혜택에\n' +
             '스페셜 멤버십 추가혜택도 받을 수 있어요',
           buttonName: '스페셜멤버십 안내'
