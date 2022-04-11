@@ -83,13 +83,22 @@ export default {
   }
 
   &--coupon {
-    min-height: 170px;
+    max-height: 170px;
     background: url('../assets/bg_coupon.png') no-repeat 0 0;
     border: 0;
 
     .icon-card__icon-wrap {
       align-items: center;
       padding-top: 0;
+    }
+
+    .icon-card__title{
+      font-size: 18px;
+      margin-top: 28px;
+    }
+    .icon-card__desc{
+      margin-top: 0;
+      height: auto;
     }
   }
 }

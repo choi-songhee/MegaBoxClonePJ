@@ -44,10 +44,18 @@
                   </ul>
                 </li>
                 <li class="dot-lists__list">매점 유료 결제 금액의 <span class="c-gblue">2%</span> 적립</li>
-                <li class="dot-lists__list">결제가 완료된 후 적립 예정 포인트로 적립되며 <span class="c-gblue">영화의 경우 상영일 익일, 매점의 경우 구매일 익일</span> 사용 가능한 포인트(가용 포인트) 로 전환됩니다.</li>
-                <li class="dot-lists__list">회원이 로그인 후 온라인 서비스를 이용 하거나 현장 매표소, 키오스크에서 멤버십 카드 제시 또는 회원임을 확인 할 수 있는 정보를 제공하여야 포인트가 적립됩니다.</li>
-                <li class="dot-lists__list">메가박스 및 제휴사 할인, 포인트 결제 등을 통해 할인 받은 금액을 제외한 실제 고객님께서 현금, 신용카드 등으로 유료 결제한 금액 기준으로 적립됩니다.</li>
-                <li class="dot-lists__list">일부 영화, 상품, 극장, 결제 수단의 경우 적립이 되지 않거나 별도의 적립률이 적용될 수 있으며 상세 내용은 해당 상품, 극장 등에 별도 공지합니다.</li>
+                <li class="dot-lists__list">결제가 완료된 후 적립 예정 포인트로 적립되며 <span
+                  class="c-gblue">영화의 경우 상영일 익일, 매점의 경우 구매일 익일</span> 사용 가능한 포인트(가용 포인트) 로 전환됩니다.
+                </li>
+                <li class="dot-lists__list">회원이 로그인 후 온라인 서비스를 이용 하거나 현장 매표소, 키오스크에서 멤버십 카드 제시 또는 회원임을 확인 할 수 있는 정보를
+                  제공하여야 포인트가 적립됩니다.
+                </li>
+                <li class="dot-lists__list">메가박스 및 제휴사 할인, 포인트 결제 등을 통해 할인 받은 금액을 제외한 실제 고객님께서 현금, 신용카드 등으로 유료 결제한 금액
+                  기준으로 적립됩니다.
+                </li>
+                <li class="dot-lists__list">일부 영화, 상품, 극장, 결제 수단의 경우 적립이 되지 않거나 별도의 적립률이 적용될 수 있으며 상세 내용은 해당 상품, 극장 등에
+                  별도 공지합니다.
+                </li>
                 <li class="dot-lists__list">VIP 선정 시 기준이 되는 포인트입니다.</li>
                 <li class="dot-lists__list">포인트 적립은 티켓에 노출된 영화 시작 시간 이전까지만 가능하며, 영화 상영 및 매점 상품 구매 이후 사후 적립은 불가능합니다.</li>
               </ul>
@@ -56,7 +64,9 @@
                 <li class="dot-lists__list">
                   일부 극장의 경우 매점 구매 시 포인트 적립이 불가합니다.
                   <ul class="dash-lists">
-                    <li class="dash-lists__list">매점 적립 제외 극장: 경산하양, 경주, 공주, 김천, 남양주, 남원, 남춘천, 북대구(칠곡), 속초, 순천, 아트나인, 안산중앙, 원주, 인천논현, 제천, 진천, 첨단, 청주사창, 충주, 파주금촌</li>
+                    <li class="dash-lists__list">매점 적립 제외 극장: 경산하양, 경주, 공주, 김천, 남양주, 남원, 남춘천, 북대구(칠곡), 속초, 순천, 아트나인,
+                      안산중앙, 원주, 인천논현, 제천, 진천, 첨단, 청주사창, 충주, 파주금촌
+                    </li>
                   </ul>
                 </li>
                 <li class="dot-lists__list">더 부티크 프라이빗 관람 시 포인트 적립이 불가합니다.</li>
@@ -77,7 +87,8 @@
               <ul class="dot-lists">
                 <li class="dot-lists__list">
                   적립된 포인트는 사용 가능한 보유포인트 내에서 <span class="c-gblue">영화, 포토카드</span> 상품 구매 시 <span class="c-gblue">상품 정가 전액을 기준</span>
-                  으로 포인트를 차감하여 사용 가능하며, 매점 상품 구매 시 <span class="c-gblue">1,000포인트 이상 부터 10P단위로</span> 포인트를 차감하여 사용 가능합니다.<br/>
+                  으로 포인트를 차감하여 사용 가능하며, 매점 상품 구매 시 <span class="c-gblue">1,000포인트 이상 부터 10P단위로</span> 포인트를 차감하여 사용
+                  가능합니다.<br/>
                   (일부 상품 포인트 사용 제외 될 수 있으며 자세한 사항은 하기 내용 확인 바랍니다.)
                 </li>
               </ul>
@@ -90,50 +101,50 @@
                     <col>
                   </colgroup>
                   <thead class="table__thead">
-                    <tr>
-                      <th scope="col">회원상품</th>
-                      <th scope="col">구분</th>
-                      <th scope="col">포인트 사용 기준</th>
-                    </tr>
+                  <tr>
+                    <th scope="col">회원상품</th>
+                    <th scope="col">구분</th>
+                    <th scope="col">포인트 사용 기준</th>
+                  </tr>
                   </thead>
                   <tbody class="table__tbody">
-                    <tr>
-                      <td rowspan="2">영화</td>
-                      <td>사용 가능 요일</td>
-                      <td>월~일(요일 무관)</td>
-                    </tr>
-                    <tr>
-                      <td>차감 포인트</td>
-                      <td>티켓 정가 100% 필요</td>
-                    </tr>
-                    <tr>
-                      <td rowspan="2">매점</td>
-                      <td>사용 가능 상품</td>
-                      <td>매점 판매 상품(일부 상품 제외)</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        차감<br/>
-                        포인트
-                      </td>
-                      <td>
-                        보유 포인트 내, 최소 1,000 포인트 부터 10 포인트 단위 사용 가능 (키오스크, 모바일 오더)<br/>
-                        ※ 현장 직원 결제 시 500 포인트 단위 사용 가능
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>포토카드</td>
-                      <td>차감 포인트</td>
-                      <td>장당 1,000 포인트</td>
-                    </tr>
-                    <tr>
-                      <td>온라인 스토어</td>
-                      <td>
-                        차감<br/>
-                        포인트
-                      </td>
-                      <td>상품별 차감 기준 상이 / 일부 상품 제외</td>
-                    </tr>
+                  <tr>
+                    <td rowspan="2">영화</td>
+                    <td>사용 가능 요일</td>
+                    <td>월~일(요일 무관)</td>
+                  </tr>
+                  <tr>
+                    <td>차감 포인트</td>
+                    <td>티켓 정가 100% 필요</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">매점</td>
+                    <td>사용 가능 상품</td>
+                    <td>매점 판매 상품(일부 상품 제외)</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      차감<br/>
+                      포인트
+                    </td>
+                    <td>
+                      보유 포인트 내, 최소 1,000 포인트 부터 10 포인트 단위 사용 가능 (키오스크, 모바일 오더)<br/>
+                      ※ 현장 직원 결제 시 500 포인트 단위 사용 가능
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>포토카드</td>
+                    <td>차감 포인트</td>
+                    <td>장당 1,000 포인트</td>
+                  </tr>
+                  <tr>
+                    <td>온라인 스토어</td>
+                    <td>
+                      차감<br/>
+                      포인트
+                    </td>
+                    <td>상품별 차감 기준 상이 / 일부 상품 제외</td>
+                  </tr>
                   </tbody>
                 </table>
               </div>
@@ -148,14 +159,20 @@
                 <li class="dot-lists__list">
                   매점 상품 구매시
                   <ul class="dash-lists">
-                    <li class="dash-lists__list">최소 1,000 포인트 부터 10포인트 단위 (키오스크, 모바일오더) 또는 500포인트 단위 (현장 직원 결제 시)로 사용 가능합니다.</li>
+                    <li class="dash-lists__list">최소 1,000 포인트 부터 10포인트 단위 (키오스크, 모바일오더) 또는 500포인트 단위 (현장 직원 결제 시)로 사용
+                      가능합니다.
+                    </li>
                     <li class="dash-lists__list">포인트 사용 후 남은 금액에 대하여 현금 또는 신용카드 등으로 결제 가능합니다.</li>
                   </ul>
                 </li>
                 <li class="dot-lists__list">메가박스 및 제휴사 할인, 제휴 포인트 결제 등 할인 수단이 적용된 티켓, 매점 상품은 포인트로 구매할 수 없습니다.</li>
-                <li class="dot-lists__list">오프라인에서 포인트 사용 시, 멤버십 카드 또는 메가박스 앱을 반드시 제시해야하며, 개인별로 설정된 포인트 비밀 번호 인증이 필요 합니다.</li>
+                <li class="dot-lists__list">오프라인에서 포인트 사용 시, 멤버십 카드 또는 메가박스 앱을 반드시 제시해야하며, 개인별로 설정된 포인트 비밀 번호 인증이 필요
+                  합니다.
+                </li>
                 <li class="dot-lists__list">특별콘텐트 (오페라, 팝콘클래식, 기획전, GV, 라이브중계 등) 및 일부 영화는 포인트 사용 관람이 불가합니다.</li>
-                <li class="dot-lists__list">매점 상품 중 프로모션 상품, 특가 상품 및 일부 품목은 포인트 사용이 제한될 수 있으며, 극장에 따라 사용 가능 상품이 상이할 수 있습니다.</li>
+                <li class="dot-lists__list">매점 상품 중 프로모션 상품, 특가 상품 및 일부 품목은 포인트 사용이 제한될 수 있으며, 극장에 따라 사용 가능 상품이 상이할 수
+                  있습니다.
+                </li>
                 <li class="dot-lists__list">“더 부티크 프라이빗” 관람 시 포인트 사용이 불가합니다.</li>
               </ul>
               <h4 class="benefit-area__subject">포인트 사용 제외 극장</h4>
@@ -163,7 +180,9 @@
                 <li class="dot-lists__list">
                   일부 극장의 경우 매점에서 포인트 사용이 불가합니다.
                   <ul class="dash-lists">
-                    <li class="dash-lists__list">사용 제외 극장 : 경산하양, 경주, 공주, 김천, 남양주, 남원, 남춘천, 북대구(칠곡), 속초, 순천, 아트나인, 안산중앙, 원주, 인천논현, 제천, 진천, 첨단, 청주사창, 충주, 파주금촌</li>
+                    <li class="dash-lists__list">사용 제외 극장 : 경산하양, 경주, 공주, 김천, 남양주, 남원, 남춘천, 북대구(칠곡), 속초, 순천, 아트나인, 안산중앙,
+                      원주, 인천논현, 제천, 진천, 첨단, 청주사창, 충주, 파주금촌
+                    </li>
                   </ul>
                 </li>
               </ul>
@@ -183,7 +202,7 @@
                 <li class="dot-lists__list">유효기간이 경과된 포인트는 매월 말일 영업 종료 후 포인트가 자동 소멸됩니다.</li>
                 <li class="dot-lists__list">소멸 기준은 잔여 가용 포인트 중 유효기간이 가장 짧은 포인트부터 소멸되며, 소멸된 포인트는 복구되지 않습니다.</li>
                 <li class="dot-lists__list">
-                  보유 포인트의 소멸 예정일이 도래할 경우, 포인트 소멸과 관련된 내용을 최소 15일 전에 문자 또는 이메일 등으로 고지합니다.<br />
+                  보유 포인트의 소멸 예정일이 도래할 경우, 포인트 소멸과 관련된 내용을 최소 15일 전에 문자 또는 이메일 등으로 고지합니다.<br/>
                   또한, 홈페이지 및 모바일 웹/앱 로그인 시 소멸 예정 포인트를 확인하실 수 있습니다.
                 </li>
               </ul>
@@ -199,7 +218,9 @@
                 <li class="dot-lists__list">
                   생일 쿠폰은 회원정보에 등록된 생일을 기준으로 발급됩니다.
                   <ul class="dash-lists">
-                    <li class="dash-lists__list">생일 2주전 쿠폰이 발행되며, 유효기간은 발행일로부터 4주입니다. (예 : 3월 16일 생일인 경우 3월 2일 발급, 3월 30일까지 사용 가능)</li>
+                    <li class="dash-lists__list">생일 2주전 쿠폰이 발행되며, 유효기간은 발행일로부터 4주입니다. (예 : 3월 16일 생일인 경우 3월 2일 발급, 3월
+                      30일까지 사용 가능)
+                    </li>
                   </ul>
                 </li>
                 <li class="dot-lists__list">발행된 쿠폰은 로그인 후 ‘나의 메가박스 > 쿠폰’에서 확인 가능합니다.</li>
@@ -220,7 +241,8 @@
               <ul class="dot-lists">
                 <li class="dot-lists__list">메가박스 회원가입 시 모바일 카드가 자동 발급됩니다.</li>
                 <li class="dot-lists__list">플라스틱 카드 수령을 원하시는 분은 메가박스 현장 매표소에서 받으실 수 있습니다.</li>
-                <li class="dot-lists__list">플라스틱 카드를 수령하신 경우 홈페이지 ‘나의 메가박스 > 멤버십 포인트 > 멤버십 카드관리’에서 등록 후 이용하실 수 있습니다.</li>
+                <li class="dot-lists__list">플라스틱 카드를 수령하신 경우 홈페이지 ‘나의 메가박스 > 멤버십 포인트 > 멤버십 카드관리’에서 등록 후 이용하실 수 있습니다.
+                </li>
               </ul>
             </section>
           </div>
@@ -228,20 +250,20 @@
         <div v-show="currentId == 1">
           <div class="inner">
             <div class="benefit-vip-lounge">
-            <div class="benefit-vip-lounge__title-area">
-              <p class="benefit-vip-lounge__title">MEGABOX VIP</p>
-              <p class="benefit-vip-lounge__text">메가박스의 더 많은 혜택을 누릴 수 있는 방법!</p>
-            </div>
-            <div class="benefit-vip-lounge__content-area">
-              <div class="benefit-vip-lounge__login-before">
-                <i class="icon-set icon-question-circle-big"></i>
-                <p class="benefit-vip-lounge__text benefit-vip-lounge__text--type2">로그인 후 메가박스 등급을 확인하세요.</p>
-                <div class="benefit-vip-lounge__login-area">
-                  <button class="benefit-vip-lounge__login-button">로그인</button>
+              <div class="benefit-vip-lounge__title-area">
+                <p class="benefit-vip-lounge__title">MEGABOX VIP</p>
+                <p class="benefit-vip-lounge__text">메가박스의 더 많은 혜택을 누릴 수 있는 방법!</p>
+              </div>
+              <div class="benefit-vip-lounge__content-area">
+                <div class="benefit-vip-lounge__login-before">
+                  <i class="icon-set icon-question-circle-big"></i>
+                  <p class="benefit-vip-lounge__text benefit-vip-lounge__text--type2">로그인 후 메가박스 등급을 확인하세요.</p>
+                  <div class="button-wrap">
+                    <button class="button">로그인</button>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
           </div>
           <div class="benefit-slider">
             <Swiper></Swiper>
@@ -251,10 +273,10 @@
               <div class="contents__title-wrap">
                 <h3 class="contents__sub-title">VIP 선정 기준</h3>
               </div>
-              <h4 class="benefit-area__subject">2022년 VIP 선정 기준</h4>
+              <h4 class="subject">2022년 VIP 선정 기준</h4>
               <div class="benefit-vip-selection__box-area">
                 <div class="benefit-vip-selection__box benefit-vip-selection__box--vip">
-                   <p class="benefit-vip-selection__title">VIP</p>
+                  <p class="benefit-vip-selection__title">VIP</p>
                   <p class="benefit-vip-selection__text">
                     2021년 누적 승급 포인트<br>
                     <br>
@@ -288,7 +310,7 @@
                 <p class="dot-lists__list">선정기간 : 2021.01.01 ~ 2021.12.31 (상영일 기준)</p>
                 <p class="dot-lists__list">자격기간 : 2022.03.02 ~ 2023.02.28 (상영일 기준)</p>
               </div>
-              <ul  class="benefit-vip-selection__ul">
+              <ul class="benefit-ul">
                 <li class="dot-lists__list">VIP 등급 선정 기준 및 혜택은 매년 상이할 수 있습니다.</li>
                 <li class="dot-lists__list">VIP 회원 혜택은 내부 사정에 의하여 변경 또는 종료될 수 있습니다.</li>
                 <li class="dot-lists__list">VIP 회원 추가 적립 포인트, 선물 받은 포인트, 이벤트 적립 포인트, 제휴처 적립 포인트 등은 VIP 산정에서 제외됩니다.</li>
@@ -299,18 +321,29 @@
               <div class="contents__title-wrap">
                 <h3 class="contents__sub-title">VIP 멤버십 혜택</h3>
               </div>
-              <h4 class="benefit-area__subject">VIP 쿠폰북</h4>
+              <div class="benefit-vip-benefit__sub-description">
+                <span class="subject">VIP 쿠폰북</span>
+                <span class="subject-desc">회원님의 취향에 따라 원하시는 쿠폰을 선택하시고 다운 받으세요!</span>
+              </div>
+              <ul class="benefit">
+                <li v-for="item in vipBenefit" :key="item.id" class="benefit__list">
+                  <IconListItem :item="item" class="benefit__item" :couponType="true"/>
+                </li>
+              </ul>
+              <ul class="benefit-ul">
+                <li class="dot-lists__list">본 혜택은 VIP 등급 유지 기간 중 제공됩니다. 직접 쿠폰을 선택하신 후 다운받으셔야 쿠폰을 이용하실 수 있습니다.</li>
+                <li class="dot-lists__list">등급 별 VIP 쿠폰 제공이 상이하오니 VIP 쿠폰북 안내를 통해 확인해주세요.</li>
+                <li class="dot-lists__list">쿠폰마다 유효 기간이 상이합니다. 유효기간을 꼭 확인해 주세요!</li>
+              </ul>
+              <div class="button-wrap button-wrap--vip">
+                <a href="#" class="button">VIP쿠폰 상세보기</a>
+              </div>
             </section>
           </div>
-          <ul class="benefit">
-            <li v-for="item in vipBenefit" :key="item.id" class="benefit__list">
-              <IconListItem :item="item" class="benefit__item" :couponType="true"/>
-            </li>
-          </ul>
         </div>
       </div>
     </div>
-    <top-button />
+    <top-button/>
   </div>
 </template>
 
@@ -413,18 +446,18 @@ export default {
       ],
       vipBenefit: [
         {
-          iconImg: require('@/assets/icon_point-save.png'),
+          iconImg: require('@/assets/icon_benefit-movie.png'),
           iconAlt: '영화 아이콘',
           iconSize: 72,
           title: '영화',
           desc: 'VIP 영화관람 쿠폰'
         },
         {
-          iconImg: require('@/assets/icon_point-save.png'),
-          iconAlt: '영화 아이콘',
+          iconImg: require('@/assets/icon_point-cafeteria.png'),
+          iconAlt: '매점 아이콘',
           iconSize: 72,
-          title: '영화',
-          desc: 'VIP 영화관람 쿠폰'
+          title: '매점',
+          desc: 'VIP 매점이용 쿠폰'
         }
       ]
     }
@@ -444,6 +477,7 @@ export default {
   border-radius: 10px;
   background: url('../assets/bg_box-slash.png');
 }
+
 .benefit-area {
   .contents__title-wrap {
     margin-bottom: 16px;
@@ -469,32 +503,20 @@ export default {
     background-color: #f2f4f5;
   }
 }
+
 .benefit {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
+  overflow: hidden;
+  padding: 15px 0 0 0;
 
   &__list {
     flex: 0 0 calc((100% - 40px) / 2);
-
-    .icon-card {
-      min-height: 210px;
-
-      &--coupon {
-        min-height: 170px;
-        max-height: 170px;
-        background: url('../assets/bg_coupon.png') no-repeat 0 0;
-        border: 0;
-
-        .icon-card__icon-wrap {
-          align-items: center;
-          padding-top: 0;
-        }
-      }
-    }
   }
 }
-.benefit-vip-lounge{
+
+.benefit-vip-lounge {
   background-image: url(../assets/bg_benefit-common-lounge.png);
   overflow: hidden;
   height: 344px;
@@ -503,38 +525,62 @@ export default {
   background-repeat: no-repeat;
   background-position: 0 0;
   background-color: transparent;
-  &__title-area{
+
+  &__title-area {
     float: left;
     width: 339px;
     height: 100%;
     text-align: center;
   }
-  &__title{
+
+  &__title {
     padding: 140px 0 0 0;
     line-height: 1.1;
     font-size: 31px;
     margin: 0;
   }
-  &__text{
+
+  &__text {
     padding: 12px 0 0 0;
     line-height: 1.3;
     margin: 0;
-    &--type2{
+
+    &--type2 {
       padding: 30px 0 20px 0;
       line-height: 1.1;
     }
   }
-  &__content-area{
+
+  &__content-area {
     float: left;
     width: calc(100% - 339px);
     height: 100%;
   }
-  &__login-before{
+
+  &__login-before {
     height: 100%;
     padding: 75px 0 0 0;
     text-align: center;
   }
-  &__login-button{
+}
+
+.button-wrap{
+  &--vip{
+    padding: 20px 0 0 0;
+    text-align: center;
+    .button{
+      color: #fff;
+      line-height: 46px;
+      margin: 0 3px;
+      display: inline-block;
+      border: 0;
+      background: #503396;
+      height: 46px;
+      padding: 0 30px;
+      text-decoration: none;
+    }
+  }
+  .button{
     width: 120px;
     padding: 0;
     background-color: transparent;
@@ -546,19 +592,23 @@ export default {
     border-radius: 4px;
   }
 }
-.icon-question-circle-big{
+
+.icon-question-circle-big {
   width: 93px;
   height: 93px;
   background-image: url("../assets/icon_question-circle-big.png");
 }
-.benefit-slider{
+
+.benefit-slider {
   margin: 70px 0;
 }
+
 .benefit-vip-selection {
   &__box-area {
     overflow: hidden;
     display: flex;
   }
+
   &__box {
     float: left;
     width: 350px;
@@ -587,15 +637,18 @@ export default {
       background-image: url("../assets/bg_benefit-vip-selection-vvip.png");
     }
   }
+
   &__title {
     font-size: 19px;
     line-height: 1.1;
     margin: 0;
   }
+
   &__text {
     padding: 15px 0 0 0;
     color: #222;
   }
+
   &__period-area {
     margin: 20px 0 0 0;
     padding: 15px 0;
@@ -603,7 +656,8 @@ export default {
     border-radius: 10px;
     background-color: #f9f9fa;
     text-align: center;
-    .dot-lists__list{
+
+    .dot-lists__list {
       display: inline-block;
       position: relative;
       margin: 0 10px;
@@ -611,8 +665,36 @@ export default {
       line-height: 1.1;
     }
   }
-  &__ul{
-    margin-top: 15px;
+}
+
+.benefit-ul{
+  margin-top: 15px;
+}
+
+.subject{
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #222;
+  line-height: 1.1;
+&-desc{
+  display: inline-block;
+  position: relative;
+  margin: 0 0 0 8px;
+  padding: 0 0 0 10px;
+  vertical-align: middle;
+  color: #444;
+  font-size: 15px;
+  &:before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 14px;
+    background-color: #dedede;
   }
+}
 }
 </style>
