@@ -317,11 +317,11 @@
                 <li class="dot-lists__list">“서로 다른 영화”는 선정 기간 내 멤버십 포인트 적립된 영화 중 서로 다른 영화를 의미합니다. (동일 영화는 1편으로 산정)</li>
               </ul>
             </section>
-            <section class="benefit-vip-benefit">
+            <section class="benefit-vip-advantage">
               <div class="contents__title-wrap">
                 <h3 class="contents__sub-title">VIP 멤버십 혜택</h3>
               </div>
-              <div class="benefit-vip-benefit__sub-description">
+              <div class="benefit-vip-advantage__sub-description">
                 <span class="subject">VIP 쿠폰북</span>
                 <span class="subject-desc">회원님의 취향에 따라 원하시는 쿠폰을 선택하시고 다운 받으세요!</span>
               </div>
@@ -336,8 +336,136 @@
                 <li class="dot-lists__list">쿠폰마다 유효 기간이 상이합니다. 유효기간을 꼭 확인해 주세요!</li>
               </ul>
               <div class="button-wrap button-wrap--vip">
-                <a href="#" class="button">VIP쿠폰 상세보기</a>
+                <a href="#" class="button button--color">VIP쿠폰 상세보기</a>
               </div>
+              <div class="benefit-vip-advantage__sub-description">
+                <span class="subject">5년 연속 VIP 혜택</span>
+                <span class="subject-desc">축하드립니다!<strong class="subject-desc--strong">5년 연속 VIP 회원</strong>에게 추가 혜택을 드립니다.</span>
+              </div>
+              <div class="benefit-vip-advantage__box-area">
+                <IconListItem :item="specialCoupon" class="benefit__item" :couponType="true"/>
+              </div>
+              <ul class="benefit-ul">
+                <li class="dot-lists__list">지난 VIP 등급 이력은 로그인 후 “나의 메가박스 > 지난 등급 조회”에서 확인 가능합니다.</li>
+                <li class="dot-lists__list">스페셜 쿠폰은 2022년 3월 2일 이후 순차적으로 지급됩니다.</li>
+                <li class="dot-lists__list">스페셜 쿠폰의 세부 사항은 쿠폰 발급 후, 쿠폰 내 유의 사항을 참고해 주십시오.</li>
+              </ul>
+              <div class="benefit-vip-advantage__sub-description">
+                <span class="subject">VIP 미션 이벤트 </span>
+                <span class="subject-desc">매월 서로 다른 영화 5회 이상 관람 시 미션 성공 쿠폰 제공!</span>
+              </div>
+              <div class="benefit-vip-advantage__mission">
+                <table class="mission-table">
+                  <tbody class="mission-table__body">
+                  <tr class="mission-table__tr">
+                    <td class="mission-table__td">
+                      <i class="icon-set icon_benefit-mission"></i>
+                    </td>
+                    <td class="mission-table__td">
+                      <div>
+                        <p class="mission-table__title">VIP, VIP PREMIUM</p>
+                        <p class="mission-table__text">영화 2천원 할인 쿠폰 2매</p>
+                      </div>
+                      <div class="mission-table__td-div">
+                        <p class="mission-table__title">VVIP</p>
+                        <p class="mission-table__text">일반 2D 무료관람 쿠폰 1매</p>
+                      </div>
+                    </td>
+                    <td class="mission-table__td">
+                      <i class="icon-set icon_plus-circle">더하기</i>
+                      콤보 4천원 할인 쿠폰 1매
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+              <ul class="benefit-ul">
+                <li class="dot-lists__list">영화 유료 관람 후, 포인트가 적립된 티켓 기준으로 서로 다른 영화 관람 편수가 책정됩니다.</li>
+                <li class="dot-lists__list">미션 달성 시 제공되는 쿠폰은 매월 2주차 내에 제공됩니다.</li>
+                <li class="dot-lists__list">지급되는 쿠폰은 일부 제한 사항이 있을 수 있습니다. 쿠폰 내 유의 사항을 참고 바랍니다.</li>
+                <li class="dot-lists__list">이벤트 진행 사항 및 경품 지급 내용은 사정에 따라 변경될 수 있습니다.</li>
+              </ul>
+              <div class="button-wrap button-wrap--vip">
+                <button class="button button--color">VIP 미션 이벤트 보기</button>
+              </div>
+              <div class="benefit-vip-advantage__sub-description">
+                <span class="subject">VIP DAY</span>
+                <span class="subject-desc">매주 수요일 영화 관람 시 포인트 추가 적립!</span>
+              </div>
+              <div class="benefit-vip-advantage__vip-day">
+                <table class="vip-day-table">
+                  <tbody class="vip-day-table__body">
+                  <tr class="vip-day-table__tr">
+                    <td class="vip-day-table__td">
+                      <i class="icon-set icon_benefit-coin"></i>
+                      <p class="vip-day-table__text">기본적립</p>
+                    </td>
+                    <td class="vip-day-table__td">
+                    <i class="icon-set icon_plus-gray-big"></i>
+                    </td>
+                    <td class="vip-day-table__td">
+                      <i class="icon-set icon_benefit-coin"></i>
+                      <p class="vip-day-table__text">VIP 추가적립</p>
+                    </td>
+                    <td class="vip-day-table__td">
+                      <i class="icon-set icon_plus-gray-big"></i>
+                    </td>
+                    <td class="vip-day-table__td">
+                      <i class="icon-set icon_benefit-coin2"></i>
+                      <p class="vip-day-table__text">
+                        VIP DAY 추가 적립
+                      </p>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+              <ul class="benefit-ul">
+                <li class="dot-lists__list">VIP 회원은 영화 관람 시, “기본 적립 포인트”만큼 추가 적립을 받을 수 있습니다.</li>
+                <li class="dot-lists__list">수요일 영화 관람 시, “기본 적립 + VIP 추가 적립 포인트” 만큼 VIP DAY 포인트가 적립됩니다.</li>
+                <li class="dot-lists__list">VIP 추가 적립, VIP DAY 적립 포인트는 VIP 선정 포인트에서 제외됩니다.</li>
+                <li class="dot-lists__list">VIP 추가 적립, VIP DAY 적립 포인트 관련 사항은 변경될 수 있습니다.</li>
+              </ul>
+              <div class="benefit-vip-advantage__sub-description">
+                <span class="subject">VIP 생일 축하 쿠폰</span>
+                <span class="subject-desc">생일 축하 콤보 무료 쿠폰 제공</span>
+              </div>
+              <ul class="benefit-ul">
+                <li class="dot-lists__list">생일을 맞으신 VIP 고객님께 콤보 무료(오리지널 팝콘 L + 탄산음료 R * 2) 쿠폰을 드립니다.</li>
+                <li class="dot-lists__list">생일 쿠폰은 1년에 1번 지급되며, 한번 발급되면 추가 발급되지 않습니다.</li>
+                <li class="dot-lists__list">생일 쿠폰은 회원정보에 등록된 생일을 기준으로 쿠폰이 발급됩니다.</li>
+                <li class="dot-lists__list">생일 2주전 쿠폰이 발행되며, 유효기간은 발행일로부터 4주입니다. (예: 3월 16일이 생일이라면 3월 2일부터 3월 30일까지 이용
+                  가능)
+                </li>
+                <li class="dot-lists__list">발행된 쿠폰은 로그인 후 ‘나의 메가박스 > 쿠폰’에서 확인 가능합니다.</li>
+                <li class="dot-lists__list">지급되는 쿠폰 혜택은 변경될 수 있습니다.</li>
+              </ul>
+              <div class="benefit-vip-advantage__sub-description">
+                <span class="subject">중앙멤버십 혜택</span>
+                <span class="subject-desc">리조트 할인, CU 모바일 상품권 등 다양한 혜택을 받을 수 있는 중앙멤버십 카드를 신청하세요!</span>
+              </div>
+
+              <ul class="benefit-ul">
+                <li class="dot-lists__lists">본 혜택은 아래 카드 신청하기에서 중앙멤버십을 별도 신청하신 고객에 한해 적용 됩니다.</li>
+                <li class="dot-lists__list">중앙멤버십 카드는 VIP 기신청자의 경우 자동 연장되며 휴대폰 번호당 1개만 발급 가능합니다..</li>
+                <li class="dot-lists__list">제휴 혜택은 사정에 따라 변경되거나 종료될 수 있습니다.</li>
+              </ul>
+              <div class="benefit-vip-advantage__sub-description">
+                <span class="subject">VIP CULTURE EVENT</span>
+                <span class="subject-desc">매월 서로 다른 영화 5회 이상 관람 시 미션 성공 쿠폰 제공!</span>
+              </div>
+              <ul class="benefit">
+                <li v-for="item in cultureEvent" :key="item.id" class="benefit__list">
+                  <IconListItem :item="item" class="benefit__item" :couponType="true" />
+                </li>
+              </ul>
+              <ul class="benefit-ul">
+                <li class="dot-lists__lists">VIP 회원 대상 교보문고 & 핫트랙스 10% 할인 쿠폰을 드립니다. (오프라인 / 1만원 이상 결제 시 사용 가능)</li>
+                <li class="dot-lists__list">VIP 회원 중 마케팅 정보 수신 동의 회원 대상에 한하여 제공됩니다.</li>
+                <li class="dot-lists__list">할인 쿠폰은 매월 초 메가박스APP으로 자동 발급됩니다. (나의 메가박스> 제휴쿠폰)</li>
+                <li class="dot-lists__list">할인 쿠폰 사용 전 쿠폰 내 유의 사항을 반드시 확인 바랍니다.</li>
+                <li class="dot-lists__list">제휴 혜택은 사정에 따라 내용이 변경되거나 종료될 수 있습니다.</li>
+              </ul>
             </section>
           </div>
         </div>
@@ -459,7 +587,30 @@ export default {
           title: '매점',
           desc: 'VIP 매점이용 쿠폰'
         }
-      ]
+      ],
+      cultureEvent: [
+        {
+          iconImg: require('@/assets/icon_benefit-kyobo.png'),
+          iconAlt: '교보문고 아이콘',
+          iconSize: 72,
+          title: '교보문고',
+          desc: '10% 할인 쿠폰'
+        },
+        {
+          iconImg: require('@/assets/icon_benefit-hot-tracks.png'),
+          iconAlt: '매점 아이콘',
+          iconSize: 72,
+          title: '매점',
+          desc: '10% 할인 쿠폰'
+        }
+      ],
+      specialCoupon: {
+        iconImg: require('@/assets/icon_benefit-movie.png'),
+        iconAlt: '핫트랙스 아이콘',
+        iconSize: 72,
+        title: '핫트랙스',
+        desc: '영화 관람 쿠폰 2매'
+      }
     }
   },
   computed: {
@@ -501,18 +652,6 @@ export default {
     text-align: center;
     border-radius: 10px;
     background-color: #f2f4f5;
-  }
-}
-
-.benefit {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  overflow: hidden;
-  padding: 15px 0 0 0;
-
-  &__list {
-    flex: 0 0 calc((100% - 40px) / 2);
   }
 }
 
@@ -564,39 +703,35 @@ export default {
   }
 }
 
-.button-wrap{
-  &--vip{
-    padding: 20px 0 0 0;
-    text-align: center;
-    .button{
-      color: #fff;
-      line-height: 46px;
-      margin: 0 3px;
-      display: inline-block;
-      border: 0;
-      background: #503396;
-      height: 46px;
-      padding: 0 30px;
-      text-decoration: none;
+.benefit-vip-advantage {
+  &__sub-description {
+    margin-top: 40px;
+
+    &:first-child {
+      margin-top: 0;
     }
   }
-  .button{
-    width: 120px;
-    padding: 0;
-    background-color: transparent;
-    line-height: 46px;
-    height: 46px;
-    border: 1px solid #c1c1c1;
-    color: #444;
-    font-weight: 400;
-    border-radius: 4px;
-  }
-}
 
-.icon-question-circle-big {
-  width: 93px;
-  height: 93px;
-  background-image: url("../assets/icon_question-circle-big.png");
+  &__box-area {
+    overflow: hidden;
+    padding: 15px 0 0 0;
+  }
+
+  &__mission {
+    margin-top: 15px;
+    padding: 40px 0;
+    text-align: center;
+    border: 1px solid #ebebeb;
+    border-radius: 10px;
+  }
+
+  &__vip-day{
+    margin-top: 15px;
+    padding: 30px 0 30px 0;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #f2f4f5;
+  }
 }
 
 .benefit-slider {
@@ -606,7 +741,6 @@ export default {
 .benefit-vip-selection {
   &__box-area {
     overflow: hidden;
-    display: flex;
   }
 
   &__box {
@@ -620,6 +754,7 @@ export default {
     background-color: #fff;
     background-position: 40px 40px;
     background-repeat: no-repeat;
+    box-sizing: border-box;
 
     &:first-child {
       margin-left: 0;
@@ -631,10 +766,18 @@ export default {
 
     &--premium {
       background-image: url("../assets/bg_benefit-vip-selection-vip-p.png");
+
+      .benefit-vip-selection__title {
+        color: #956c08;
+      }
     }
 
     &--vvip {
       background-image: url("../assets/bg_benefit-vip-selection-vvip.png");
+
+      .benefit-vip-selection__title {
+        color: #513397;
+      }
     }
   }
 
@@ -647,6 +790,7 @@ export default {
   &__text {
     padding: 15px 0 0 0;
     color: #222;
+    margin: 0;
   }
 
   &__period-area {
@@ -667,34 +811,196 @@ export default {
   }
 }
 
-.benefit-ul{
-  margin-top: 15px;
+.benefit {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  overflow: hidden;
+  padding: 15px 0 0 0;
+
+  &__list {
+    flex: 0 0 calc((100% - 40px) / 2);
+  }
+
+  &-ul {
+    margin-top: 15px;
+  }
 }
 
-.subject{
+.subject {
   margin: 0 0 10px;
   font-size: 18px;
   font-weight: 400;
   color: #222;
   line-height: 1.1;
-&-desc{
-  display: inline-block;
-  position: relative;
-  margin: 0 0 0 8px;
-  padding: 0 0 0 10px;
-  vertical-align: middle;
-  color: #444;
-  font-size: 15px;
-  &:before{
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 1px;
-    height: 14px;
-    background-color: #dedede;
+
+  &-desc {
+    display: inline-block;
+    position: relative;
+    margin: 0 0 0 8px;
+    padding: 0 0 0 10px;
+    vertical-align: middle;
+    color: #444;
+    font-size: 15px;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1px;
+      height: 14px;
+      background-color: #dedede;
+    }
+
+    &--strong {
+      color: #01738b;
+      font-weight: normal;
+    }
   }
 }
+
+.mission-table {
+  display: inline-table;
+  width: auto;
+  margin: 0;
+  border: 0;
+  table-layout: fixed;
+  border-collapse: collapse;
+  empty-cells: show;
+
+  &__td {
+    padding: 0;
+    text-align: left;
+
+    &-div {
+      margin-top: 5px;
+    }
+
+    &:last-child {
+      padding: 0 0 0 50px;
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    width: 200px;
+    height: 38px;
+    margin: 0 15px 0 0;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 19px;
+    background-color: #f2f4f5;
+  }
+
+  &__text {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.vip-day-table{
+  display: inline-table;
+  width: auto;
+  margin: 0;
+  border: 0;
+  table-layout: fixed;
+  border-collapse: collapse;
+  empty-cells: show;
+
+  &__td{
+    padding: 0 20px;
+    vertical-align: top;
+  }
+
+  &__text{
+    padding: 30px 0 0 0;
+    line-height: 1.1;
+    color: #222;
+    margin: 0;
+  }
+}
+
+.button-wrap {
+  .button {
+    width: 120px;
+    padding: 0;
+    background-color: transparent;
+    line-height: 46px;
+    height: 46px;
+    border: 1px solid #c1c1c1;
+    color: #444;
+    font-weight: 400;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+    &--link {
+      height: 46px;
+      padding: 0 30px;
+      line-height: 44px;
+      margin: 0 3px;
+      width: auto;
+      color: #503396;
+      display: inline-block;
+      border: 1px solid #503396;
+    }
+
+    &--color {
+      width: auto;
+      color: #fff;
+      margin: 0 3px;
+      display: inline-block;
+      border: 0;
+      background-color: #503396;
+      padding: 0 30px;
+      text-decoration: none;
+    }
+  }
+
+  &--vip {
+    padding: 20px 0 0 0;
+    text-align: center;
+  }
+}
+
+.icon-question-circle-big {
+  width: 93px;
+  height: 93px;
+  background-image: url("../assets/icon_question-circle-big.png");
+}
+
+.icon_benefit-mission {
+  margin-right: 35px;
+  width: 72px;
+  height: 72px;
+  background-image: url("../assets/icon_benefit-mission.png");
+}
+
+.icon_plus-circle {
+  margin-right: 35px;
+  width: 16px;
+  height: 16px;
+  background-image: url("../assets/icon_plus-circle.png");
+}
+
+.icon_benefit-coin{
+  width: 72px;
+  height: 72px;
+  background-image: url("../assets/icon_benefit-coin.png");
+}
+
+.icon_plus-gray-big{
+  margin-top: 18px;
+  width: 31px;
+  height: 31px;
+  background-image: url("../assets/icon_plus-gray-big.png");
+}
+
+.icon_benefit-coin2{
+  width: 90px;
+  height: 72px;
+  background-image: url("../assets/icon_benefit-coin2.png");
 }
 </style>
