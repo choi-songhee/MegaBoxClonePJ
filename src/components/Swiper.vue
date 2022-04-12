@@ -329,8 +329,8 @@ export default {
 
   &__pagination--progressbar {
     display: inline-block;
-    left: 0;
-    right: auto;
+    left: auto;
+    right: 50%;
     width: unset;
     top: 44px;
     color: #503396;
