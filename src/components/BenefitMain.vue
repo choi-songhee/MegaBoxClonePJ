@@ -392,27 +392,27 @@
                 <span class="subject">VIP DAY</span>
                 <span class="subject-desc">매주 수요일 영화 관람 시 포인트 추가 적립!</span>
               </div>
-              <div class="benefit-vip-advantage__vip-day">
-                <table class="vip-day-table">
-                  <tbody class="vip-day-table__body">
-                  <tr class="vip-day-table__tr">
-                    <td class="vip-day-table__td">
+              <div class="benefit-vip-advantage__vip">
+                <table class="vip-table">
+                  <tbody class="vip-table__body">
+                  <tr class="vip-table__tr">
+                    <td class="vip-table__td">
                       <i class="icon-set icon_benefit-coin"></i>
-                      <p class="vip-day-table__text">기본적립</p>
+                      <p class="vip-table__text">기본적립</p>
                     </td>
-                    <td class="vip-day-table__td">
+                    <td class="vip-table__td">
                     <i class="icon-set icon_plus-gray-big"></i>
                     </td>
-                    <td class="vip-day-table__td">
+                    <td class="vip-table__td">
                       <i class="icon-set icon_benefit-coin"></i>
-                      <p class="vip-day-table__text">VIP 추가적립</p>
+                      <p class="vip-table__text">VIP 추가적립</p>
                     </td>
-                    <td class="vip-day-table__td">
+                    <td class="vip-table__td">
                       <i class="icon-set icon_plus-gray-big"></i>
                     </td>
-                    <td class="vip-day-table__td">
+                    <td class="vip-table__td">
                       <i class="icon-set icon_benefit-coin2"></i>
-                      <p class="vip-day-table__text">
+                      <p class="vip-table__text">
                         VIP DAY 추가 적립
                       </p>
                     </td>
@@ -444,15 +444,52 @@
                 <span class="subject">중앙멤버십 혜택</span>
                 <span class="subject-desc">리조트 할인, CU 모바일 상품권 등 다양한 혜택을 받을 수 있는 중앙멤버십 카드를 신청하세요!</span>
               </div>
-
+              <div class="benefit-vip-advantage__vip">
+                <table class="vip-table">
+                  <tbody>
+                    <tr>
+                      <td class="vip-table__td">
+                        <i class="icon-set icon_benefit-jm-resort"></i>
+                        <p class="vip-table__text">리조트회원 우대</p>
+                      </td>
+                      <td class="vip-table__td">
+                        <i class="icon-set icon_plus-gray-big"></i>
+                      </td>
+                      <td class="vip-table__td">
+                        <i class="icon-set ico-benefit-jm-sale"></i>
+                        <p class="vip-table__text">메가박스 최대 9,000원 할인
+                        </p>
+                      </td>
+                      <td class="vip-table__td">
+                        <i class="icon-set icon_plus-gray-big"></i>
+                      </td>
+                      <td class="vip-table__td">
+                        <i class="icon-set icon_benefit-jm-health-chk"></i>
+                        <p class="vip-table__text">건강검진 우대</p>
+                      </td>
+                      <td class="vip-table__td">
+                        <i class="icon-set icon_plus-gray-big"></i>
+                      </td>
+                      <td class="vip-table__td">
+                        <i class="icon-set ico-benefit-jm-cu"></i>
+                        <p class="vip-table__text">CU 모바일 상품권 10% 할인</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
               <ul class="benefit-ul">
                 <li class="dot-lists__lists">본 혜택은 아래 카드 신청하기에서 중앙멤버십을 별도 신청하신 고객에 한해 적용 됩니다.</li>
                 <li class="dot-lists__list">중앙멤버십 카드는 VIP 기신청자의 경우 자동 연장되며 휴대폰 번호당 1개만 발급 가능합니다..</li>
                 <li class="dot-lists__list">제휴 혜택은 사정에 따라 변경되거나 종료될 수 있습니다.</li>
               </ul>
+              <div class="button-wrap button-wrap--vip">
+                <a href="#" class="button button--link">중앙멤버십 상세 안내</a>
+                <button class="button button--color">카드 신청하기</button>
+              </div>
               <div class="benefit-vip-advantage__sub-description">
                 <span class="subject">VIP CULTURE EVENT</span>
-                <span class="subject-desc">매월 서로 다른 영화 5회 이상 관람 시 미션 성공 쿠폰 제공!</span>
+                <span class="subject-desc">MEET PLAY SHARE 메가박스에서 당신의 문화생활을 위해 준비했어요~</span>
               </div>
               <ul class="benefit">
                 <li v-for="item in cultureEvent" :key="item.id" class="benefit__list">
@@ -598,9 +635,9 @@ export default {
         },
         {
           iconImg: require('@/assets/icon_benefit-hot-tracks.png'),
-          iconAlt: '매점 아이콘',
+          iconAlt: '핫트랙스 아이콘',
           iconSize: 72,
-          title: '매점',
+          title: '핫트랙스',
           desc: '10% 할인 쿠폰'
         }
       ],
@@ -725,7 +762,7 @@ export default {
     border-radius: 10px;
   }
 
-  &__vip-day{
+  &__vip{
     margin-top: 15px;
     padding: 30px 0 30px 0;
     text-align: center;
@@ -901,7 +938,7 @@ export default {
   }
 }
 
-.vip-day-table{
+.vip-table{
   display: inline-table;
   width: auto;
   margin: 0;
@@ -1003,4 +1040,29 @@ export default {
   height: 72px;
   background-image: url("../assets/icon_benefit-coin2.png");
 }
+
+.icon_benefit-jm-resort{
+  width: 72px;
+  height: 72px;
+  background-image: url("../assets/icon_benefit-jm-resort.png");
+}
+
+.ico-benefit-jm-sale{
+  width: 72px;
+  height: 72px;
+  background-image: url("../assets/icon_benefit-jm-sale.png");
+}
+
+.icon_benefit-jm-health-chk{
+  width: 72px;
+  height: 72px;
+  background-image: url("../assets/icon_benefit-jm-health-chk.png");
+}
+
+.ico-benefit-jm-cu{
+  width: 72px;
+  height: 72px;
+  background-image: url("../assets/icon_benefit-jm-cu.png");
+}
+
 </style>
