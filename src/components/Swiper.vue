@@ -2,17 +2,15 @@
   <div class="event-slider">
     <div class="event-slider__head">
       <h3 class="event-slider__sub-title contents__sub-title">추천 이벤트</h3>
-      <div class="event-slider__bullet swiper-pagination-bullets">
-        <span class="swiper-pagination-bullet swiper-pagination-bullet--active"></span>
-        <span class="swiper-pagination-bullet"></span>
-        <span class="swiper-pagination-bullet"></span>
-        <span class="swiper-pagination-bullet"></span>
-        <span class="swiper-pagination-bullet"></span>
-      </div>
-      <div
-        class="event-slider__pagination swiper-pagination"
-        slot="pagination"
-      ></div>
+<!--      <div class="event-slider__bullet swiper-pagination-bullets">-->
+<!--        <span class="swiper-pagination-bullet swiper-pagination-bullet&#45;&#45;active"></span>-->
+<!--        <span class="swiper-pagination-bullet"></span>-->
+<!--        <span class="swiper-pagination-bullet"></span>-->
+<!--        <span class="swiper-pagination-bullet"></span>-->
+<!--        <span class="swiper-pagination-bullet"></span>-->
+<!--      </div>-->
+      <div class="event-slider__pagination swiper-pagination"></div>
+      <div class="event-slider__pagination--progressbar swiper-pagination"></div>
       <div class="event-slider__util">
         <div class="swiper-button-prev swiper-button-prev--type-arrow" slot="button-prev"></div>
         <div class="swiper-button-next swiper-button-next--type-arrow" slot="button-next"></div>
@@ -138,7 +136,38 @@ export default {
         disableOnInteraction: true,
         loop: true,
         pagination: {
-          el: '.swiper-pagination',
+          el: '.event-slider__pagination',
+          type: 'fraction'
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        },
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false
+        },
+        controller: {
+
+        }
+      },
+      swiperOption2: {
+        pagination: {
+          el: '.event-slider__pagination--progressbar',
+          type: 'fraction'
+        }
+      }
+    }
+  },
+  mounted () {
+    this.$nextTick(() => {
+      const multipleSwiper = new Swiper('.event-slider__body', {
+        slidesPerView: 2,
+        spaceBetween: 40,
+        disableOnInteraction: true,
+        loop: true,
+        pagination: {
+          el: '.event-slider__pagination',
           type: 'fraction'
         },
         navigation: {
@@ -149,8 +178,17 @@ export default {
           delay: 3000,
           disableOnInteraction: false
         }
-      }
-    }
+      })
+
+      const pagingSwiper = new Swiper('.event-slider__body', {
+        pagination: {
+          el: '.event-slider__pagination',
+          type: 'fraction'
+        }
+      })
+
+      multipleSwiper.controller.control = pagingSwiper
+    })
   },
   methods: {
     onClickTab (index) {
@@ -227,11 +265,11 @@ export default {
   }
 
   &__auto-play {
-    background-image: url("../assets/pc/icon_swiper-play.png");
+    background-image: url("../assets/icon_swiper-play.png");
   }
 
   &__auto-stop {
-    background-image: url("../assets/pc/icon_swiper-pause.png");
+    background-image: url("../assets/icon_swiper-pause.png");
   }
 
   &__body {
@@ -287,6 +325,16 @@ export default {
     font-size: 13px;
     padding: 0;
     margin: 0;
+  }
+
+  &__pagination--progressbar {
+    display: inline-block;
+    left: auto;
+    right: 50%;
+    width: unset;
+    top: 44px;
+    color: #503396;
+    line-height: 1.1;
   }
 }
 
@@ -360,29 +408,29 @@ export default {
 
 .swiper-button-prev {
   left: -25px;
-  background-image: url("../assets/pc/icon_swiper-button-prev.png");
+  background-image: url("../assets/icon_swiper-button-prev.png");
 
   &--color:hover {
-    background-image: url("../assets/pc/icon_swiper-button-prev-color.png");
+    background-image: url("../assets/icon_swiper-button-prev-color.png");
   }
 
   &--type-arrow {
     left: 0;
-    background-image: url("../assets/pc/icon_swiper-arrow-prev.png");
+    background-image: url("../assets/icon_swiper-arrow-prev.png");
   }
 }
 
 .swiper-button-next {
   right: -25px;
-  background-image: url("../assets/pc/icon_swiper-button-next.png");
+  background-image: url("../assets/icon_swiper-button-next.png");
 
   &--color:hover {
-    background-image: url("../assets/pc/icon_swiper-button-next-color.png");
+    background-image: url("../assets/icon_swiper-button-next-color.png");
   }
 
   &--type-arrow {
     right: 0;
-    background-image: url("../assets/pc/icon_swiper-arrow-next.png");
+    background-image: url("../assets/icon_swiper-arrow-next.png");
   }
 }
 </style>

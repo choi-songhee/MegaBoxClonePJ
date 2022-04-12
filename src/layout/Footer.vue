@@ -132,32 +132,32 @@ export default {
       margin-right: 4px;
       width: 15px;
       height: 15px;
-      background-image: url('../assets/pc/icon_search.png');
+      background-image: url('../assets/icon_search-white.png');
     }
     &-twitter{
       width: 32px;
       height: 30px;
-      background-image: url("../assets/pc/icon_twitter.png");
+      background-image: url("../assets/icon_twitter.png");
     }
     &-facebook{
       width: 32px;
       height: 30px;
-      background-image: url("../assets/pc/icon_facebook.png");
+      background-image: url("../assets/icon_facebook.png");
     }
     &-instagram{
       width: 32px;
       height: 30px;
-      background-image: url("../assets/pc/icon_instagram.png");
+      background-image: url("../assets/icon_instagram.png");
     }
     &-googleplay{
       width: 32px;
       height: 30px;
-      background-image: url("../assets/pc/icon_googleplay.png");
+      background-image: url("../assets/icon_googleplay.png");
     }
     &-appstore{
       width: 32px;
       height: 30px;
-      background-image: url("../assets/pc/icon_appstore.png");
+      background-image: url("../assets/icon_appstore.png");
     }
   }
 
@@ -177,7 +177,7 @@ export default {
     margin: 0 20px 0 0;
     padding: 0;
     text-indent: -9999px;
-    background: url('../assets/pc/icon_logo-opacity.png');
+    background: url('../assets/icon_logo-opacity.png');
   }
 
   &__info {

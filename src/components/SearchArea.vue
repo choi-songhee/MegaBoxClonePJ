@@ -66,7 +66,7 @@ export default {
       font-size: 0;
       line-height: 0;
       border: 0;
-      background: #fff url("../assets/pc/icon_search.png") no-repeat center;
+      background: #fff url("../assets/icon_search-white.png") no-repeat center;
       cursor: pointer;
       padding: 0;
     }
