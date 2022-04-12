@@ -265,11 +265,11 @@ export default {
   }
 
   &__auto-play {
-    background-image: url("../assets/pc/icon_swiper-play.png");
+    background-image: url("../assets/icon_swiper-play.png");
   }
 
   &__auto-stop {
-    background-image: url("../assets/pc/icon_swiper-pause.png");
+    background-image: url("../assets/icon_swiper-pause.png");
   }
 
   &__body {
@@ -408,29 +408,29 @@ export default {
 
 .swiper-button-prev {
   left: -25px;
-  background-image: url("../assets/pc/icon_swiper-button-prev.png");
+  background-image: url("../assets/icon_swiper-button-prev.png");
 
   &--color:hover {
-    background-image: url("../assets/pc/icon_swiper-button-prev-color.png");
+    background-image: url("../assets/icon_swiper-button-prev-color.png");
   }
 
   &--type-arrow {
     left: 0;
-    background-image: url("../assets/pc/icon_swiper-arrow-prev.png");
+    background-image: url("../assets/icon_swiper-arrow-prev.png");
   }
 }
 
 .swiper-button-next {
   right: -25px;
-  background-image: url("../assets/pc/icon_swiper-button-next.png");
+  background-image: url("../assets/icon_swiper-button-next.png");
 
   &--color:hover {
-    background-image: url("../assets/pc/icon_swiper-button-next-color.png");
+    background-image: url("../assets/icon_swiper-button-next-color.png");
   }
 
   &--type-arrow {
     right: 0;
-    background-image: url("../assets/pc/icon_swiper-arrow-next.png");
+    background-image: url("../assets/icon_swiper-arrow-next.png");
   }
 }
 </style>
