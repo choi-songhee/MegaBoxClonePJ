@@ -3,15 +3,13 @@
     ref="scrollTopButton"
     class="floating-button__wrap"
   >
-    <transition>
-      <a
-        @click="scrollTop"
-        href="#" class="floating-button__anchor"
-      >
-        <span class="sr-only">Top</span>
-        <img src="../../src/assets/icon_top_button.png" alt="Scroll to top" class="floating-button__top">
-      </a>
-    </transition>
+    <a
+      href="#"
+      class="floating-button__anchor"
+    >
+      <span class="sr-only">Top</span>
+      <img src="../../src/assets/icon_top_button.png" alt="Scroll to top" class="floating-button__top">
+    </a>
   </div>
 </template>
 
@@ -19,9 +17,7 @@
 export default {
   name: 'TopButton',
   data () {
-    return {
-      // visible: false
-    }
+    return {}
   },
   mounted () {
     window.addEventListener('scroll', this.handleScroll)
@@ -32,7 +28,7 @@ export default {
   methods: {
     handleScroll () {
       let scrollBtn = this.$refs.scrollTopButton
-      if (window.pageYOffset > 350) {
+      if (window.scrollY > 0) {
         scrollBtn.classList.add('active')
       } else {
         scrollBtn.classList.remove('active')
@@ -45,9 +41,14 @@ export default {
 <style scoped lang="scss">
   .floating-button {
     &__wrap {
+      position: sticky;
+      bottom: 25px;
+      width: 48px;
+      height: 48px;
+      right: 100px;
+      left: auto;
       display: block;
-      position: relative;
-      width: 100%;
+      float: right;
       z-index: 10;
       opacity: 0;
       transition: opacity 0.35s ease-in-out;
@@ -57,9 +58,6 @@ export default {
     }
     &__anchor {
       display: block;
-      position: fixed;
-      bottom: 25px;
-      right: 5%;
     }
     &__top {
       width: 48px;
@@ -67,10 +65,5 @@ export default {
       border-radius: 48px;
     }
   }
-  .fade-enter-active, .fade-leave-active {
-    transition: opacity .5s;
-  }
-  .fade-enter, .fade-leave-to {
-    opacity: 0;
-  }
+
 </style>

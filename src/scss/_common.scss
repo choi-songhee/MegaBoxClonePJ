@@ -16,6 +16,7 @@
   min-height: 1000px;
   margin: 0;
   padding: 40px 0 0;
+  height: calc(100% - 200px);
 
   &__title-wrap {
     display: flex;

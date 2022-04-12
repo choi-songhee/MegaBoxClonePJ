@@ -1,5 +1,8 @@
 @import "/_font.scss";
 
+html {
+  scroll-behavior: smooth;
+}
 body, html {
   width: 100%;
   height: 100%;
