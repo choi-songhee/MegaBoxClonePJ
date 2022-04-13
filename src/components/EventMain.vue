@@ -22,7 +22,7 @@
             </div>
             <ul class="event">
               <li v-for="item in megaPickLists" :key="item.id" class="event__list">
-                <ListItem :item="item"/>
+                <ListItem :item="item" class="underline-title"/>
               </li>
             </ul>
 
@@ -32,7 +32,7 @@
             </div>
             <ul class="event">
               <li v-for="item in megaPickLists" :key="item.id" class="event__list">
-                <ListItem :item="item"/>
+                <ListItem :item="item" class="underline-title"/>
               </li>
             </ul>
 
@@ -42,7 +42,7 @@
             </div>
             <ul class="event">
               <li v-for="item in megaPickLists" :key="item.id" class="event__list">
-                <ListItem :item="item"/>
+                <ListItem :item="item" class="underline-title"/>
               </li>
             </ul>
 
@@ -52,7 +52,7 @@
             </div>
             <ul class="event">
               <li v-for="item in megaPickLists" :key="item.id" class="event__list">
-                <ListItem :item="item"/>
+                <ListItem :item="item" class="underline-title"/>
               </li>
             </ul>
 
@@ -62,7 +62,7 @@
             </div>
             <ul class="event">
               <li v-for="item in megaPickLists" :key="item.id" class="event__list">
-                <ListItem :item="item"/>
+                <ListItem :item="item" class="underline-title"/>
               </li>
             </ul>
           </div>
@@ -72,7 +72,7 @@
             <SearchArea></SearchArea>
             <ul class="event">
               <li v-for="item in megaPickLists" :key="item.id" class="event__list">
-                <ListItem :item="item"/>
+                <ListItem :item="item" class="underline-title"/>
               </li>
             </ul>
           </div>
@@ -91,7 +91,7 @@
             <SearchArea></SearchArea>
             <ul class="event">
               <li v-for="item in megaPickLists" :key="item.id" class="event__list">
-                <ListItem :item="item"/>
+                <ListItem :item="item" class="underline-title"/>
               </li>
             </ul>
           </div>
@@ -101,7 +101,7 @@
             <SearchArea></SearchArea>
             <ul class="event">
               <li v-for="item in megaPickLists" :key="item.id" class="event__list">
-                <ListItem :item="item"/>
+                <ListItem :item="item" class="underline-title"/>
               </li>
             </ul>
           </div>
@@ -111,7 +111,7 @@
             <SearchArea></SearchArea>
             <ul class="event">
               <li v-for="item in megaPickLists" :key="item.id" class="event__list">
-                <ListItem :item="item"/>
+                <ListItem :item="item" class="underline-title"/>
               </li>
             </ul>
           </div>
@@ -121,7 +121,7 @@
             <SearchArea></SearchArea>
             <ul class="event">
               <li v-for="item in megaPickLists" :key="item.id" class="event__list">
-                <ListItem :item="item"/>
+                <ListItem :item="item" class="underline-title"/>
               </li>
             </ul>
           </div>
@@ -282,19 +282,6 @@ export default {
       &:focus,
       &:hover {
         text-decoration: underline;
-      }
-    }
-  }
-}
-
-::v-deep {
-  .card {
-    &__link {
-      &:hover {
-        .card__title,
-        .card__date {
-          text-decoration: underline !important;
-        }
       }
     }
   }

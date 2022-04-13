@@ -56,6 +56,11 @@ export default {
 
     &:hover {
       border: 1px solid #503396;
+
+      .card__title,
+      .card__date {
+        text-decoration: none;
+      }
     }
   }
 
@@ -151,6 +156,15 @@ export default {
     &__quantity-num {
       color: #444;
       font-style: normal;
+    }
+  }
+
+  &.underline-title {
+    &:hover {
+      .card__title,
+      .card__date {
+        text-decoration: underline !important;
+      }
     }
   }
 }
