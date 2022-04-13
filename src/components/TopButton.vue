@@ -45,7 +45,7 @@ export default {
       bottom: 25px;
       width: 48px;
       height: 48px;
-      right: 100px;
+      right: 5.208vw;
       left: auto;
       display: block;
       float: right;
@@ -58,6 +58,10 @@ export default {
     }
     &__anchor {
       display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 100%;
+      box-shadow: 1px 1px 7px 0 rgb(0 0 0 / 50%);
     }
     &__top {
       width: 48px;
